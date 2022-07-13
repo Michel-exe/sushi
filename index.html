@@ -5,26 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Jura&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
     <title>Platillos</title>
 </head>
 <body>
-    <!-- <div class="obtPedido">
-        <form action="" id="form">
-            <label for="obtPedInp">Cantidad de platillos</label>
-            <input type="tel" maxlength="2" minlength="0" id="obtPedInp">
-            <button type="submit">Guardar</button>
-        </form>
-    </div> -->
-    <div class="pedido">
-        <section>
-            <nav></nav>
-            <a href="" id="pedido">Hacer pedido</a>
-        </section>
-    </div>
-    <!-- <a href="https://api.whatsapp.com/send?phone=527491086498&text=Hola%20amigo%20Jeje">Whastapp</a> -->
-    <div class="con"></div>
-    <div class="ordenar">
-        <button id="ordenar">Ordenar</button>
+    <div class="orden"></div>
+    <div class="deposito"></div>
+    <div class="domicilio"></div>
+    <div class="cuerpo">
+        <h1>Sushi Maki</h1>
+        <div class="navegacion">
+            <section>
+                <div>
+                    <picture>
+                        <img src="media/onigiri.png" alt="">
+                    </picture>
+                    <h2>Origiri</h2>
+                    <span>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
+                    </span>
+                </div>
+                <nav>
+                    <div>
+                        <strong class="canPlatillos" id="canPlatillos">5</strong>
+                        <span>
+                            <b>Platillo</b>
+                            <i>$50</i>
+                        </span>
+                        <strong class="cancelarPlatillo" id="cancelarPlatillo">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path><path d="M10.5 4l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z"></path></svg>
+                        </strong>
+                        <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.</small>
+                    </div>
+                    <div>
+                        <strong class="canPlatillos" id="canPlatillos">5</strong>
+                        <span>
+                            <b>Platillo</b>
+                            <i>$50</i>
+                        </span>
+                        <strong class="cancelarPlatillo" id="cancelarPlatillo">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path><path d="M10.5 4l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z"></path></svg>
+                        </strong>
+                        <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.</small>
+                    </div>
+                    <div>
+                        <strong class="canPlatillos" id="canPlatillos">5</strong>
+                        <span>
+                            <b>Platillo</b>
+                            <i>$50</i>
+                        </span>
+                        <strong class="cancelarPlatillo" id="cancelarPlatillo">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path><path d="M10.5 4l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z"></path></svg>
+                        </strong>
+                        <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.</small>
+                    </div>
+                </nav>
+            </section>
+            <section>
+                <div>
+                    <picture>
+                        <img src="media/onigiri.png" alt="">
+                    </picture>
+                    <h2>Origiri</h2>
+                    <span>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
+                    </span>
+                </div>
+                <nav>
+                    <div>
+                        <strong class="canPlatillos" id="canPlatillos">5</strong>
+                        <span>
+                            <b>Platillo</b>
+                            <i>$50</i>
+                        </span>
+                        <strong class="cancelarPlatillo" id="cancelarPlatillo">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path><path d="M10.5 4l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z"></path></svg>
+                        </strong>
+                        <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.</small>
+                    </div>
+                    <div>
+                        <strong class="canPlatillos" id="canPlatillos">5</strong>
+                        <span>
+                            <b>Platillo</b>
+                            <i>$50</i>
+                        </span>
+                        <strong class="cancelarPlatillo" id="cancelarPlatillo">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path><path d="M10.5 4l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z"></path></svg>
+                        </strong>
+                        <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.</small>
+                    </div>
+                    <div>
+                        <strong class="canPlatillos" id="canPlatillos">5</strong>
+                        <span>
+                            <b>Platillo</b>
+                            <i>$50</i>
+                        </span>
+                        <strong class="cancelarPlatillo" id="cancelarPlatillo">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path><path d="M10.5 4l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z"></path></svg>
+                        </strong>
+                        <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quo.</small>
+                    </div>
+                </nav>
+            </section>
+        </div>
     </div>
 </body>
 <script src="code.js"></script>
