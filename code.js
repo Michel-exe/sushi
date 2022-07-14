@@ -271,55 +271,125 @@ let obj = [
          }
       ]
    },
-   // {
-   //    name: "",
-   //    data: [
-   //       {
-   //          plat: "",
-   //          ingr: "",
-   //          cost: 0
-   //       },
-   //    ]
-   // },
-   // {
-   //    name: "",
-   //    data: [
-   //       {
-   //          plat: "",
-   //          ingr: "",
-   //          cost: 0
-   //       },
-   //    ]
-   // },
-   // {
-   //    name: "",
-   //    data: [
-   //       {
-   //          plat: "",
-   //          ingr: "",
-   //          cost: 0
-   //       },
-   //    ]
-   // },
-   // {
-   //    name: "",
-   //    data: [
-   //       {
-   //          plat: "",
-   //          ingr: "",
-   //          cost: 0
-   //       },
-   //    ]
-   // },
+   {
+      name: "tempura",
+      imag: "media/onigiri.png",
+      data: [
+         {
+            plat: "roshy roll",
+            ingr: "surimi, aguacate por fuera en tempura con pasta tampico.",
+            cost: 80
+         },
+      ]
+   },
+   {
+      name: "sushi charola",
+      imag: "media/onigiri.png",
+      data: [
+         {
+            plat: "sushi empanizados",
+            ingr: "charola sushi empanizado 30 piezas",
+            cost: 200
+         },
+         {
+            plat: "sushi surtidos",
+            ingr: "charola sushi empanizado y frio 40 piezas",
+            cost: 350
+         },
+         {
+            plat: "sushi surtidos",
+            ingr: "charola sushi empanizado y frio 30 piezas",
+            cost: 270
+         }
+      ]
+   },
+   {
+      name: "ramen",
+      imag: "media/onigiri.png",
+      data: [
+         {
+            plat: "ramen res",
+            ingr: "res, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen",
+            cost: 75
+         },
+         {
+            plat: "ramen surimi",
+            ingr: "surimi en tempura, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen.",
+            cost: 75
+         }
+      ]
+   },
+   {
+      name: "poke",
+      imag: "media/onigiri.png",
+      data: [
+         {
+            plat: "poke amai toriniku",
+            ingr: "pollo tempura en teriyaki, mango, pepino, ajonjolin, arroz gohan y alga nori.",
+            cost: 65
+         },
+         {
+            plat: "poke surimi terivyaki",
+            ingr: "surimi tempura en teriyaki, mango, pepino, ajonjolin, arroz gohan y alga nori.",
+            cost: 65
+         }
+      ]
+   },
 ]
-const subComponent = (data) => {
-   // <p>  ${data.plat} - ${data.cost} - ${data.ingr} </p>
+const navegacion = document.getElementById("navegacion");
+const platillos = document.getElementById("platillos");
+const deposito = document.getElementById("deposito");
+const domicilio = document.getElementById("domicilio");
+const orden = document.getElementById("orden");
+const inputPlatillos = document.getElementById("inputPlatillos");
+const formPlatillos = document.getElementById("formPlatillos");
+let elementActual;
+
+formPlatillos.addEventListener("submit", e => {
+   e.preventDefault();
+   let inp = inputPlatillos.value;
+   if (inp.length == 0) {
+      alert("Por favor complete el campo")
+   } else {
+      if (/^\d{1,2}$/.test(inp)) {
+         if (inp == "0") {
+            platillos.style.transform = 'scale(0)'
+            elementActual.classList.remove("ordenado")
+         } else {
+            elementActual.firstElementChild.innerHTML = inp
+            elementActual.classList.add("ordenado")
+            elementActual.setAttribute("data-plat", inp)
+         }
+         platillos.style.transform = 'scale(0)'
+      } else {
+         alert("Por favor complete el campo correctamente")
+      }
+      // console.log(elementActual);
+   }
+   inputPlatillos.value = "";
+})
+const ordenesComponent = ({plat,pre,pz,tot}) =>{
    return `
-      <div>
-         <strong class="canPlatillos" id="canPlatillos">5</strong>
+      <div class="ordenMainCon">
+         <div>
+             <h3>${plat}</h3>
+             <span>
+                 <h4>$${pre} / ${pz}pz</h4>
+             </span>
+         </div>
+         <b>$ ${tot}</b>
+      </div>
+   `
+}
+const subComponent = ({ plat, cost, ingr }) => {
+   // <p>  ${data.plat} - ${data.cost} - ${data.ingr} </p>
+   // console.log(plat);
+   return `
+      <div data-name="${plat}" data-cost=${cost} >
+         <strong class="canPlatillos" id="canPlatillos">0</strong>
          <span>
-            <b>${data.plat}</b>
-            <i>$${data.cost}</i>
+            <b>${plat}</b>
+            <i>$${cost}</i>
          </span>
          <strong class="cancelarPlatillo" id="cancelarPlatillo">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -327,18 +397,18 @@ const subComponent = (data) => {
                <path d="M10.5 4l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z"></path>
             </svg>
          </strong>
-         <small>${data.ingr}</small>
+         <small>${ingr}</small>
       </div>
    `;
 };
 const componente = (obj, long) => {
    return `
-      <section>
+      <section longitud=${long}>
          <div>
              <picture>
                  <img src="${obj.imag}" alt="">
              </picture>
-             <h2>${obj.name} - ${long}</h2>
+             <h2>${obj.name}</h2>
              <span class="downCotent" data-long=${long}>
                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
              </span>
@@ -348,7 +418,6 @@ const componente = (obj, long) => {
       </section>
          `;
 }
-let navegacion = document.getElementById("navegacion");
 obj.map(o => {
    navegacion.innerHTML += componente({
       imag: o.imag,
@@ -370,20 +439,56 @@ document.querySelectorAll(".downCotent").forEach(dc => {
       ]
    })
 })
-let platillos = document.querySelectorAll("#navegacion > section nav div");
-platillos.forEach(pl => {
+document.querySelectorAll("#navegacion > section nav div").forEach(pl => {
    pl.addEventListener("click", e => {
       // console.clear()
       let tar = e.target;
-      let con =
-         (tar.tagName == "STRONG" || tar.tagName == "SPAN" || tar.tagName == "SMALL")
+      let tag = e.target.tagName;
+      let con = (
+         (tag == "STRONG" || tag == "SPAN" || tag == "SMALL")
             ? tar.parentElement
-            : (tar.tagName == "DIV") ? tar : (tar.tagName == "path")
+            : (tag == "DIV") ? tar : (tag == "path")
                ? tar.parentElement.parentElement.parentElement
-               : tar.parentElement.parentElement
-      // console.log(tar.parentElement.parentElement.parentElement);
-      // console.log(tar.tagName);
-      con.classList.toggle("ordenado")
-      // console.log(con);
+               : tar.parentElement.parentElement)
+      
+      if (tag == "path" || tag == "svg" || tag == "STRONG") {
+         con.classList.remove("ordenado");
+      } else {
+         elementActual = con;
+         inputPlatillos.focus()
+         platillos.style.transform = 'scale(1)'
+         // if (!con.classList.contains("ordenado")) {
+         // } else {
+         //    // if (tag == "path" || tag == "SVG" || tag == "STRONG") {
+         //    //    con.classList.remove("ordenado");
+         //    // } else {
+         //       inputPlatillos.focus()
+         //       platillos.style.transform = 'scale(1)'
+         //    // }
+         // }
+      }
    })
+})
+document.getElementById("abrirOrden").addEventListener("click", ()=>{
+   let con = document.getElementById("ordenMain")
+   let tot=0;
+   let totfin=0;
+   document.querySelectorAll(".ordenado").forEach(or => {
+      tot= parseInt(or.getAttribute("data-cost")) * parseInt(or.getAttribute("data-plat"))
+      totfin+=tot
+      con.innerHTML+=ordenesComponent({
+         plat: or.getAttribute("data-name"),
+         pre: or.getAttribute("data-cost"),
+         pz: or.getAttribute("data-plat"),
+         tot: tot
+      })
+      // console.log(tot);
+
+      // console.log(or.getAttribute("data-name") + " - " + or.getAttribute("data-cost") + " - " + or.getAttribute("data-plat"));
+   })
+   // con.innerHTML+=`
+   //    <a href="#">Confirmar pedido</a>
+   // `
+   document.querySelector(".tot b").innerHTML=`$ ${totfin}`
+   orden.style.transform="scale(1)"
 })

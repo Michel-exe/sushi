@@ -52,7 +52,7 @@ img{
         }
         // input{}
         label{font-size: 1rem;}
-        a{
+        a,.opcButton{
             font-size: .85rem;
             // margin-top: 15px;
             width: 210px;
@@ -116,42 +116,64 @@ img{
     overflow: auto;
     section{
         .ordenMain{
-            width: 90%;
-            margin: 0 auto 10px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #ccc;
-            // background: red;
-            div{
-                width: 100%;
-                position: relative;
-                h3{
-                    font-size: 1rem;
-                    font-weight: 100;
-                    // font-family: "Josefin Sans",sans-serif;
-                    font-family: 'Montserrat', sans-serif;
-                }
-                span{
-                    display: block;
-                    width: 100px;
-                    // background: blue;
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    font-size: .8rem;
-                    // float: right;
-                    h4{
+            .ordenMainCon{
+                width: 90%;
+                margin: 0 auto 10px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #ccc;
+                div{
+                    width: 100%;
+                    position: relative;
+                    h3{
+                        font-size: 1rem;
                         font-weight: 100;
-                        // font-family: "Jura",sans-serif;
+                        text-transform: capitalize;
+                        // font-family: "Josefin Sans",sans-serif;
                         font-family: 'Montserrat', sans-serif;
+                    }
+                    span{
+                        display: block;
+                        width: 100px;
+                        // background: blue;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        font-size: .8rem;
+                        // float: right;
+                        h4{
+                            font-weight: 100;
+                            // font-family: "Jura",sans-serif;
+                            font-family: 'Montserrat', sans-serif;
+                        }
                     }
                 }
             }
+            // background: red;
             b{
                 display: block;
                 text-align: end;
                 // font-family: "Josefin Sans",sans-serif;
                 font-family: "Jura",sans-serif;
                 font-size: .85rem;
+            }
+        }
+        .tot{
+            width: 90%;
+            margin: 20px auto 0;
+            text-align: right;
+            font-weight: 100;
+        }
+        >span{
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            button{
+                width: 90%;
+                background: none;
+                border: 0;
+                cursor: pointer;
             }
         }
     }
@@ -235,7 +257,7 @@ img{
                 div{
                     border-bottom: 2px solid #ddd;
                     // margin-bottom: 5px;
-                    padding: 15px 0 5px;
+                    padding: 15px 0 0;
                     position: relative;
                     display: grid;
                     grid-template-columns: 50px 1fr 50px;
@@ -256,7 +278,7 @@ img{
                     }
                     small{
                         width: calc(100% - 100px);
-                        transform: translateY(-4px);
+                        transform: translateY(-15px);
                         margin: 0 auto;
                         grid-column: span 4;
                         font-size: .85rem;
@@ -274,7 +296,7 @@ img{
                         font-size: 1rem;
                         background: red;
                         color: white;
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -284,6 +306,8 @@ img{
                         transform: translate(150% , 10px);
                         cursor: pointer;
                         transition: .2s;
+                        // background: red;
+                        padding: 5px 0;
                         svg{
                             font-size: 1.5rem;
                         }
@@ -311,6 +335,17 @@ img{
                 }
             }
         }
+    }
+    button{
+        padding: 5px 0;
+        background: none;
+        border: 0;
+        box-shadow: 0 0 5px #0000c2;
+        border-radius: 10px;
+        font-size: .8rem;
+        width: 180px;
+        margin: 50px auto 50vh;
+        cursor: pointer;
     }
 }
 @media screen and (max-width: 500px) {
