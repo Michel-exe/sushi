@@ -35,12 +35,21 @@ img{
     transition: .2s all ease-in-out;
     transform: scale(var(--s));
     z-index: var(--i);
+    // padding-top: 50px;
+    // padding-bottom: 50px;
     >section{
         background: white;
         width: 95%;
         max-width: 550px;
         padding: 25px 0;
         border-radius: 15px;
+        max-height: 95vh;
+        overflow: auto;
+        &::-webkit-scrollbar {-webkit-appearance: none;}
+        &::-webkit-scrollbar:vertical {width:10px;}
+        &::-webkit-scrollbar:horizontal {height: 0;}
+        &::-webkit-scrollbar-thumb {background-color: #b9b9b9;border-radius: 25px;border-right: 3px solid #f1f2f3;}
+        &::-webkit-scrollbar-track {border-radius: 10px;}
         h2{
             text-align: center;
             color: rgb(0, 0, 194);
@@ -113,7 +122,9 @@ img{
 }
 .orden{
     background: rgba(0, 0, 0, 0.6);
-    overflow: auto;
+    // padding: 60px 0px;
+    // margin-top: 50px;
+    // padding: 300px 0 300px;
     section{
         .ordenMain{
             .ordenMainCon{
@@ -226,15 +237,17 @@ img{
             height: 58px;
             overflow: hidden;
             >div{
+                width: 95%;
+                margin: 0 auto;
                 height: 60px;
                 padding: 10px 0;
                 border-bottom: 2px solid #bbb;
                 display: grid;
-                grid-template-columns: 70px 1fr 50px;
+                grid-template-columns: 80px 1fr 50px;
                 place-content: center;
                 // background: blue;
                 picture{
-                    width: 50px;
+                    width: 60px;
                     height: 30px;
                     // img
                 }
@@ -323,13 +336,12 @@ img{
                         }
                     }
                 }
-                &.desplegado{
-                    >div{
-                        span{
-                            svg{
-                                
-                                transform: rotate(.5turn);
-                            }
+            }
+            &.desplegado{
+                >div{
+                    span{
+                        svg{
+                            transform: rotate(.5turn);
                         }
                     }
                 }

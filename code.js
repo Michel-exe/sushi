@@ -1,7 +1,7 @@
 let obj = [
    {
       name: "sushi frio",
-      imag: "media/onigiri.png",
+      imag: "media/sushi.png",
       data: [
          {
             plat: "salmontino",
@@ -60,7 +60,7 @@ let obj = [
    },
    {
       name: "sushi empanizado",
-      imag: "media/onigiri.png",
+      imag: "media/sushi3.png",
       data: [
          {
             plat: "delux roll",
@@ -106,7 +106,7 @@ let obj = [
    },
    {
       name: "yakimeshi",
-      imag: "media/onigiri.png",
+      imag: "media/sopa.png",
       data: [
          {
             plat: "yakimeshi verdura",
@@ -132,7 +132,7 @@ let obj = [
    },
    {
       name: "pastas",
-      imag: "media/onigiri.png",
+      imag: "media/ramen.png",
       data: [
          {
             plat: "pasta schezuan hiyoko",
@@ -148,7 +148,7 @@ let obj = [
    },
    {
       name: "teppanyaki ",
-      imag: "media/onigiri.png",
+      imag: "media/teppanyaki.png",
       data: [
          {
             plat: "teppanyaki verdura",
@@ -169,7 +169,7 @@ let obj = [
    },
    {
       name: "temaki",
-      imag: "media/onigiri.png",
+      imag: "media/temaki.png",
       data: [
          {
             plat: "temaki kappa-shako",
@@ -185,7 +185,7 @@ let obj = [
    },
    {
       name: "kushiague",
-      imag: "media/onigiri.png",
+      imag: "media/poke.png",
       data: [
          {
             plat: "kushi queso",
@@ -210,12 +210,87 @@ let obj = [
       ]
    },
    {
+      name: "gyozas",
+      imag: "media/gyoza.png",
+      data: [
+         {
+            plat: "gyozas",
+            ingr: "Rellenas de pollo sabor schezuan acompañado con verduras.",
+            cost: 55
+         }
+      ]
+   },
+   {
+      name: "tempura",
+      imag: "media/poke.png",
+      data: [
+         {
+            plat: "roshy roll",
+            ingr: "surimi, aguacate por fuera en tempura con pasta tampico.",
+            cost: 80
+         },
+      ]
+   },
+   {
+      name: "sushi charola",
+      imag: "media/bento.png",
+      data: [
+         {
+            plat: "sushi empanizados",
+            ingr: "charola sushi empanizado 30 piezas",
+            cost: 200
+         },
+         {
+            plat: "sushi surtidos",
+            ingr: "charola sushi empanizado y frio 40 piezas",
+            cost: 350
+         },
+         {
+            plat: "sushi surtidos",
+            ingr: "charola sushi empanizado y frio 30 piezas",
+            cost: 270
+         }
+      ]
+   },
+   {
+      name: "ramen",
+      imag: "media/ramen.png",
+      data: [
+         {
+            plat: "ramen res",
+            ingr: "res, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen",
+            cost: 75
+         },
+         {
+            plat: "ramen surimi",
+            ingr: "surimi en tempura, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen.",
+            cost: 75
+         }
+      ]
+   },
+   {
+      name: "poke",
+      imag: "media/poke.png",
+      data: [
+         {
+            plat: "poke amai toriniku",
+            ingr: "pollo tempura en teriyaki, mango, pepino, ajonjolin, arroz gohan y alga nori.",
+            cost: 65
+         },
+         {
+            plat: "poke surimi terivyaki",
+            ingr: "surimi tempura en teriyaki, mango, pepino, ajonjolin, arroz gohan y alga nori.",
+            cost: 65
+         }
+      ]
+   },
+   {
       name: "bebidas",
-      imag: "media/onigiri.png",
+      imag: "media/beer.png",
       data: [
          { plat: "nieve flotante limon", cost: 38 },
-         { plat: "jarra de te helado (negro)", cost: 40 },
-         { plat: "vaso de te helado (negro)", cost: 15 },
+         { plat: "jarra de te helado", ingr:"Negro", cost: 40 },
+         { plat: "vaso de te helado", ingr:"Negro", cost: 15 },
          { plat: "jarra de calpiña", cost: 50 },
          { plat: "vaso de calpiña", cost: 25 },
          { plat: "refresco lata", cost: 20 },
@@ -224,7 +299,7 @@ let obj = [
    },
    {
       name: "postres",
-      imag: "media/onigiri.png",
+      imag: "media/narutomaki.png",
       data: [
          {
             plat: "tempura helado classic",
@@ -249,7 +324,7 @@ let obj = [
    },
    {
       name: "extras",
-      imag: "media/onigiri.png",
+      imag: "media/takoyaki.png",
       data: [
          { plat: "extra salsa de anguila", cost: 10 },
          { plat: "extra aderezo de chipotle", cost: 10 },
@@ -260,114 +335,7 @@ let obj = [
          { plat: "ingrediente extra", cost: 10 }
       ]
    },
-   {
-      name: "gyozas",
-      imag: "media/onigiri.png",
-      data: [
-         {
-            plat: "gyozas",
-            ingr: "Rellenas de pollo sabor schezuan acompañado con verduras.",
-            cost: 55
-         }
-      ]
-   },
-   {
-      name: "tempura",
-      imag: "media/onigiri.png",
-      data: [
-         {
-            plat: "roshy roll",
-            ingr: "surimi, aguacate por fuera en tempura con pasta tampico.",
-            cost: 80
-         },
-      ]
-   },
-   {
-      name: "sushi charola",
-      imag: "media/onigiri.png",
-      data: [
-         {
-            plat: "sushi empanizados",
-            ingr: "charola sushi empanizado 30 piezas",
-            cost: 200
-         },
-         {
-            plat: "sushi surtidos",
-            ingr: "charola sushi empanizado y frio 40 piezas",
-            cost: 350
-         },
-         {
-            plat: "sushi surtidos",
-            ingr: "charola sushi empanizado y frio 30 piezas",
-            cost: 270
-         }
-      ]
-   },
-   {
-      name: "ramen",
-      imag: "media/onigiri.png",
-      data: [
-         {
-            plat: "ramen res",
-            ingr: "res, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen",
-            cost: 75
-         },
-         {
-            plat: "ramen surimi",
-            ingr: "surimi en tempura, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen.",
-            cost: 75
-         }
-      ]
-   },
-   {
-      name: "poke",
-      imag: "media/onigiri.png",
-      data: [
-         {
-            plat: "poke amai toriniku",
-            ingr: "pollo tempura en teriyaki, mango, pepino, ajonjolin, arroz gohan y alga nori.",
-            cost: 65
-         },
-         {
-            plat: "poke surimi terivyaki",
-            ingr: "surimi tempura en teriyaki, mango, pepino, ajonjolin, arroz gohan y alga nori.",
-            cost: 65
-         }
-      ]
-   },
 ]
-const navegacion = document.getElementById("navegacion");
-const platillos = document.getElementById("platillos");
-const deposito = document.getElementById("deposito");
-const domicilio = document.getElementById("domicilio");
-const orden = document.getElementById("orden");
-const inputPlatillos = document.getElementById("inputPlatillos");
-const formPlatillos = document.getElementById("formPlatillos");
-let elementActual;
-
-formPlatillos.addEventListener("submit", e => {
-   e.preventDefault();
-   let inp = inputPlatillos.value;
-   if (inp.length == 0) {
-      alert("Por favor complete el campo")
-   } else {
-      if (/^\d{1,2}$/.test(inp)) {
-         if (inp == "0") {
-            platillos.style.transform = 'scale(0)'
-            elementActual.classList.remove("ordenado")
-         } else {
-            elementActual.firstElementChild.innerHTML = inp
-            elementActual.classList.add("ordenado")
-            elementActual.setAttribute("data-plat", inp)
-         }
-         platillos.style.transform = 'scale(0)'
-      } else {
-         alert("Por favor complete el campo correctamente")
-      }
-      // console.log(elementActual);
-   }
-   inputPlatillos.value = "";
-})
 const ordenesComponent = ({plat,pre,pz,tot}) =>{
    return `
       <div class="ordenMainCon">
@@ -384,6 +352,10 @@ const ordenesComponent = ({plat,pre,pz,tot}) =>{
 const subComponent = ({ plat, cost, ingr }) => {
    // <p>  ${data.plat} - ${data.cost} - ${data.ingr} </p>
    // console.log(plat);
+   // console.log(ingr);
+   if(ingr==undefined){
+      ingr="";
+   }
    return `
       <div data-name="${plat}" data-cost=${cost} >
          <strong class="canPlatillos" id="canPlatillos">0</strong>
@@ -418,6 +390,41 @@ const componente = (obj, long) => {
       </section>
          `;
 }
+const scale = (el,bol) =>{
+   el.style.transform= `scale(${bol ? '1' : '0'})`
+}
+const navegacion = document.getElementById("navegacion");
+const platillos = document.getElementById("platillos");
+const deposito = document.getElementById("deposito");
+const domicilio = document.getElementById("domicilio");
+const orden = document.getElementById("orden");
+const inputPlatillos = document.getElementById("inputPlatillos");
+const formPlatillos = document.getElementById("formPlatillos");
+let elementActual;
+
+formPlatillos.addEventListener("submit", e => {
+   e.preventDefault();
+   let inp = inputPlatillos.value;
+   if (inp.length == 0) {
+      alert("Por favor complete el campo")
+   } else {
+      if (/^\d{1,2}$/.test(inp)) {
+         if (inp == "0") {
+            platillos.style.transform = 'scale(0)'
+            elementActual.classList.remove("ordenado")
+         } else {
+            elementActual.firstElementChild.innerHTML = inp
+            elementActual.classList.add("ordenado")
+            elementActual.setAttribute("data-plat", inp)
+         }
+         platillos.style.transform = 'scale(0)'
+      } else {
+         alert("Por favor complete el campo correctamente")
+      }
+      // console.log(elementActual);
+   }
+   inputPlatillos.value = "";
+})
 obj.map(o => {
    navegacion.innerHTML += componente({
       imag: o.imag,
@@ -427,9 +434,21 @@ obj.map(o => {
       navegacion.lastElementChild.lastElementChild.innerHTML += subComponent(d)
    })
 })
-document.querySelectorAll(".downCotent").forEach(dc => {
-   dc.addEventListener("click", () => {
-      let padre = dc.parentElement.parentElement;
+// document.querySelectorAll(".downCotent").forEach(dc => {
+//    dc.addEventListener("click", () => {
+//       let padre = dc.parentElement.parentElement;
+//       padre.classList.contains("desplegado") ? [
+//          padre.style.height = "58px",
+//          padre.classList.remove("desplegado")
+//       ] : [
+//          padre.style.height = `${padre.scrollHeight + 10}px`,
+//          padre.classList.add("desplegado")
+//       ]
+//    })
+// })
+document.querySelectorAll(".navegacion section > div").forEach(dl => {
+   dl.addEventListener("click", () => {
+      let padre = dl.parentElement;
       padre.classList.contains("desplegado") ? [
          padre.style.height = "58px",
          padre.classList.remove("desplegado")
@@ -439,6 +458,7 @@ document.querySelectorAll(".downCotent").forEach(dc => {
       ]
    })
 })
+
 document.querySelectorAll("#navegacion > section nav div").forEach(pl => {
    pl.addEventListener("click", e => {
       // console.clear()
@@ -471,6 +491,7 @@ document.querySelectorAll("#navegacion > section nav div").forEach(pl => {
 })
 document.getElementById("abrirOrden").addEventListener("click", ()=>{
    let con = document.getElementById("ordenMain")
+   con.innerHTML="";
    let tot=0;
    let totfin=0;
    document.querySelectorAll(".ordenado").forEach(or => {
@@ -482,13 +503,35 @@ document.getElementById("abrirOrden").addEventListener("click", ()=>{
          pz: or.getAttribute("data-plat"),
          tot: tot
       })
-      // console.log(tot);
-
-      // console.log(or.getAttribute("data-name") + " - " + or.getAttribute("data-cost") + " - " + or.getAttribute("data-plat"));
    })
-   // con.innerHTML+=`
-   //    <a href="#">Confirmar pedido</a>
-   // `
-   document.querySelector(".tot b").innerHTML=`$ ${totfin}`
-   orden.style.transform="scale(1)"
+   if(totfin > 0){
+      document.querySelector(".tot b").innerHTML=`$ ${totfin}`
+      orden.style.transform="scale(1)"
+   } else{
+      alert("Por favor ordene algo")
+   }
+})
+document.getElementById("opcPago").addEventListener("click", e =>{
+   let tar = e.target
+   if(tar.tagName=="BUTTON"){
+      ((tar.getAttribute("id")=="pagoDeposito") 
+      ? deposito : domicilio).style.transform= `scale(1)`
+   }
+})
+domicilio.addEventListener("click", e =>{
+   if(e.target.getAttribute("id")=="domicilio"){
+      orden.style.transform=`scale(0)`
+      domicilio.style.transform=`scale(0)`
+   }
+})
+deposito.addEventListener("click", e =>{
+   if(e.target.getAttribute("id")=="deposito"){
+      orden.style.transform=`scale(0)`
+      deposito.style.transform=`scale(0)`
+   }
+})
+orden.addEventListener("click", e =>{
+   if(e.target.getAttribute("id")=="orden"){
+      orden.style.transform=`scale(0)`
+   }
 })
