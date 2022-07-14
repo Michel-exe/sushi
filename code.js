@@ -405,8 +405,10 @@ const formPlatillos = document.getElementById("formPlatillos");
 const cantEfectivo = document.getElementById("cantEfectivo");
 let elementActual;
 
+window.addEventListener("submit", e =>{
+   e.preventDefault()
+})
 formPlatillos.addEventListener("submit", e => {
-   e.preventDefault();
    let inp = inputPlatillos.value;
    if (inp.length == 0) {
       alert("Por favor complete el campo")
