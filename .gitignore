@@ -1,3 +1,5 @@
-.scss
-.txt
-/menu
+*.scss
+*.css.map
+*.txt
+./menu/*.txt
+./menu/*.jpeg

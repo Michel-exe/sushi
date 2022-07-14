@@ -8,13 +8,14 @@ body{
     background-image: url("https://images.adsttc.com/media/images/5b22/d831/f197/ccfa/2700/00ff/medium_jpg/KIDO_06.jpg?1529010216");
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     min-height: 100vh;
     // padding-top: 60px;
 }
 html{
     font-size: 20px;
 }
-div,section,nav,picture,img,span,small,strong{
+div,section,nav,picture,img,span,small,strong,label,input,button,a{
     display: block;
     width: 100%;
 }
@@ -22,8 +23,168 @@ img{
     height: 100%;
     object-fit: contain;
 }
+.platillos,.deposito,.domicilio,.orden{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s all ease-in-out;
+    transform: scale(var(--s));
+    z-index: var(--i);
+    >section{
+        background: white;
+        width: 95%;
+        max-width: 550px;
+        padding: 25px 0;
+        border-radius: 15px;
+        h2{
+            text-align: center;
+            color: rgb(0, 0, 194);
+            // font-family: 'Rubik Moonrocks', cursive;
+            font-family: "Josefin Sans",sans-serif;
+            font-size: 1.2rem;
+            padding-bottom: 10px;
+            letter-spacing: 1.5px;
+        }
+        // input{}
+        label{font-size: 1rem;}
+        a{
+            font-size: .85rem;
+            // margin-top: 15px;
+            width: 210px;
+            // width: 20lt;
+            margin: 20px auto 0;
+            text-decoration: none;
+            // background: black;
+            text-align: center;
+            box-shadow: 0 0 5px blue;
+            border-radius: 10px;
+            padding: 7px 0;
+        }
+        h3{font-size: .9rem;}
+        b{font-size: 1rem;}
+        span{font-size: .9rem;}
+        form{
+            width: 90%;
+            margin: 0 auto;
+            input{
+                margin: 2px auto 15px;
+                outline: none;
+                padding: 10px 15px;
+                border-radius: 10px;
+            }
+        }
+        i{
+            display: block;
+            opacity: .9;
+            font-family: "Jura",sans-serif;
+            font-size: .8rem;
+            padding-top: 15px;
+            text-align: center;
+            font-weight: 600;
+            color: rgb(255, 0, 0);
+        }
+    }
+    // color: white;
+}
+.platillos{
+    background: rgba(0, 0, 0, 0.6);
+    >section{
+        form{
+            input{
+                margin: 10px auto 15px;
+            }
+            button{
+                background: none;
+                padding: 5px 0;
+                max-width: 150px;
+                margin: 0 auto;
+                border-radius: 10px;
+                cursor: pointer;
+
+            }
+        }
+        // color: white;
+    }
+}
+.orden{
+    background: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+    section{
+        .ordenMain{
+            width: 90%;
+            margin: 0 auto 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+            // background: red;
+            div{
+                width: 100%;
+                position: relative;
+                h3{
+                    font-size: 1rem;
+                    font-weight: 100;
+                    // font-family: "Josefin Sans",sans-serif;
+                    font-family: 'Montserrat', sans-serif;
+                }
+                span{
+                    display: block;
+                    width: 100px;
+                    // background: blue;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    font-size: .8rem;
+                    // float: right;
+                    h4{
+                        font-weight: 100;
+                        // font-family: "Jura",sans-serif;
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                }
+            }
+            b{
+                display: block;
+                text-align: end;
+                // font-family: "Josefin Sans",sans-serif;
+                font-family: "Jura",sans-serif;
+                font-size: .85rem;
+            }
+        }
+    }
+}
+.deposito{
+    backdrop-filter: blur(12px);
+    >section{
+        div{
+            width: 90%;
+            margin: 15px auto 5px;
+            // display: flex;
+            gap: 5px;
+            h3{
+                font-weight: 100;
+                margin-bottom: 4px;
+            }
+            b{
+                padding-left: 30px;
+            }
+            span{
+                font-weight: 100;
+                text-align: center;
+            }
+            // a{}
+        }
+    }
+}
+.domicilio{
+    backdrop-filter: blur(12px);
+}
 .cuerpo{
-    background: white;
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(10px);
     min-height: 100vh;
     padding: 25px 0 20px;
     h1{
@@ -35,35 +196,35 @@ img{
         padding-top: 15px;
         section{
             width: 90%;
-            height: auto;
+            // height: auto;
             box-shadow: 0 0 10px #ccc;
             margin: 0 auto 20px;
             border-radius: 15px;
-            overflow: hidden;
             transition: .3s all ease-in-out;
-            // height: 58px;
-            // height: 80px;
+            height: 58px;
+            overflow: hidden;
             >div{
                 height: 60px;
                 padding: 10px 0;
                 border-bottom: 2px solid #bbb;
-                margin-bottom: 20px;
                 display: grid;
-                grid-template-columns: 100px 1fr 50px;
+                grid-template-columns: 70px 1fr 50px;
                 place-content: center;
                 // background: blue;
                 picture{
+                    width: 50px;
                     height: 30px;
                     // img
                 }
                 h2{
                     letter-spacing: 2px;
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
                     font-family: 'Rubik Moonrocks', cursive;
                 }
                 span{
                     cursor: pointer;
                     svg{
+                        transition: .3s all ease-in-out;
                         font-size: 25px;
                     }
                 }
@@ -73,8 +234,8 @@ img{
                 margin: 0 auto;
                 div{
                     border-bottom: 2px solid #ddd;
-                    margin-bottom: 15px;
-                    padding-bottom: 5px;
+                    // margin-bottom: 5px;
+                    padding: 15px 0 5px;
                     position: relative;
                     display: grid;
                     grid-template-columns: 50px 1fr 50px;
@@ -85,6 +246,7 @@ img{
                         b{
                             font-size: 1.1rem;
                             font-family: 'Josefin Sans', sans-serif;
+                            text-transform: capitalize;
                         }
                         i{
                             font-size: 1rem;
@@ -107,43 +269,45 @@ img{
                     }
                     .canPlatillos{
                         width: 45px;
-                        transform: translate(-30% , 10px);
+                        transform: translate(-150% , 10px);
                         // font-size: 15px;
                         font-size: 1rem;
                         background: red;
                         color: white;
+                        font-size: 1.2rem;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        font-size: 1.2rem;
+                        transition: .2s;
                     }
                     .cancelarPlatillo{
-                        transform: translateY(10px);
+                        transform: translate(150% , 10px);
                         cursor: pointer;
+                        transition: .2s;
                         svg{
-                            // font-size: 21px;
                             font-size: 1.5rem;
                         }
                     }
-                    // .canPlatillos,.cancelarPlatillo{
-                    //     position: absolute;
-                    //     top: 50%;
-                    //     transform: translateY(-50%);
-                    // }
-                    // .canPlatillos{
-
-                    //     left: -25px;
-                    // }
-                    // .cancelarPlatillo{
-                    //     right: -30px;
-                    //     cursor: pointer;
-                    //     svg{
-                    //         font-size: 20px;
-                    //     }
-                    // }
-                    // small{
-                    //     // width: 95%;
-                    // }
+                    &.ordenado{
+                        // background: rgb(255, 255, 186);
+                        .canPlatillos{
+                            // opacity: 1;
+                            transform: translate(-30% , 10px);
+                        }
+                        .cancelarPlatillo{
+                            transform: translate(10px , 10px);
+                        }
+                    }
+                }
+                &.desplegado{
+                    >div{
+                        span{
+                            svg{
+                                
+                                transform: rotate(.5turn);
+                            }
+                        }
+                    }
                 }
             }
         }

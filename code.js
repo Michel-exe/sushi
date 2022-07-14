@@ -188,23 +188,23 @@ let obj = [
       imag: "media/onigiri.png",
       data: [
          {
-            plat: "KUSHI QUESO",
-            ingr: "Brocheta de queso manchego, philadelphia, empanizado.",
+            plat: "kushi queso",
+            ingr: "brocheta de queso manchego, philadelphia, empanizado.",
             cost: 35
          },
          {
-            plat: "KUSHI EBI",
-            ingr: "Brocheta de camaron, philadelphia, empanizado.",
+            plat: "kushi ebi",
+            ingr: "brocheta de camaron, philadelphia, empanizado.",
             cost: 35
          },
          {
-            plat: "KUSHI SURIM ",
-            ingr: "Brocheta de surimi, philadelphia, empanizado.",
+            plat: "kushi surim ",
+            ingr: "brocheta de surimi, philadelphia, empanizado.",
             cost: 30
          },
          {
-            plat: "KUSHI BANAN ",
-            ingr: "Brocheta de plátano frito, philadelphia, empanizado.",
+            plat: "kushi banan ",
+            ingr: "brocheta de plátano frito, philadelphia, empanizado.",
             cost: 25
          }
       ]
@@ -260,6 +260,17 @@ let obj = [
          { plat: "ingrediente extra", cost: 10 }
       ]
    },
+   {
+      name: "gyozas",
+      imag: "media/onigiri.png",
+      data: [
+         {
+            plat: "gyozas",
+            ingr: "Rellenas de pollo sabor schezuan acompañado con verduras.",
+            cost: 55
+         }
+      ]
+   },
    // {
    //    name: "",
    //    data: [
@@ -301,62 +312,78 @@ let obj = [
    //    ]
    // },
 ]
-const subComponent = (data)=>{
+const subComponent = (data) => {
    // <p>  ${data.plat} - ${data.cost} - ${data.ingr} </p>
    return `
       <div>
-          <strong class="canPlatillos" id="canPlatillos">5</strong>
-          <span>
-              <b>${data.plat}</b>
-              <i>$${data.cost}</i>
-          </span>
-          <strong class="cancelarPlatillo" id="cancelarPlatillo">
-              <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path><path d="M10.5 4l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z"></path></svg>
-          </strong>
-          <small>${data.ingr}</small>
+         <strong class="canPlatillos" id="canPlatillos">5</strong>
+         <span>
+            <b>${data.plat}</b>
+            <i>$${data.cost}</i>
+         </span>
+         <strong class="cancelarPlatillo" id="cancelarPlatillo">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+               <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path>
+               <path d="M10.5 4l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z"></path>
+            </svg>
+         </strong>
+         <small>${data.ingr}</small>
       </div>
    `;
 };
-const componente = (obj,vec)=>{
+const componente = (obj, long) => {
    return `
       <section>
          <div>
              <picture>
                  <img src="${obj.imag}" alt="">
              </picture>
-             <h2>${obj.name}</h2>
-             <span>
+             <h2>${obj.name} - ${long}</h2>
+             <span class="downCotent" data-long=${long}>
                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
              </span>
          </div>
          <nav>
          </nav>
-         </section>
+      </section>
          `;
-         // ${
-         //    // vec.forEach(v => subComponent(v))
-         //    // vec.map(v => { return subComponent(v) })
-         // }
 }
 let navegacion = document.getElementById("navegacion");
-// document.getElementById("navegacion").lastElementChild;
-let a=0
 obj.map(o => {
-   navegacion.innerHTML+=componente({
+   navegacion.innerHTML += componente({
       imag: o.imag,
       name: o.name.toUpperCase()
-   }, o.data)
-   // console.log(o.data);
-   o.data.map(d =>{
-      navegacion.lastElementChild.lastElementChild.innerHTML+=subComponent(d)
+   }, o.data.length)
+   o.data.map(d => {
+      navegacion.lastElementChild.lastElementChild.innerHTML += subComponent(d)
    })
-   // console.log(navegacion.lastElementChild.lastElementChild);
-   // console.log("__");
-   // console.log(o.name.toUpperCase());
-   // console.log(o.imag.toUpperCase());
-   // console.log("/*");
-   // o.data.map(d => {
-      // console.log("    Platillo: " + d.plat);
-   // })
-   // console.log("*/");
+})
+document.querySelectorAll(".downCotent").forEach(dc => {
+   dc.addEventListener("click", () => {
+      let padre = dc.parentElement.parentElement;
+      padre.classList.contains("desplegado") ? [
+         padre.style.height = "58px",
+         padre.classList.remove("desplegado")
+      ] : [
+         padre.style.height = `${padre.scrollHeight + 10}px`,
+         padre.classList.add("desplegado")
+      ]
+   })
+})
+let platillos = document.querySelectorAll("#navegacion > section nav div");
+platillos.forEach(pl => {
+   pl.addEventListener("click", e => {
+      // console.clear()
+      let tar = e.target;
+      let con =
+         (tar.tagName == "STRONG" || tar.tagName == "SPAN" || tar.tagName == "SMALL")
+            ? tar.parentElement
+            : (tar.tagName == "DIV") ? tar : (tar.tagName == "path")
+               ? tar.parentElement.parentElement.parentElement
+               : tar.parentElement.parentElement
+      // console.log(tar.parentElement.parentElement.parentElement);
+      // console.log(tar.tagName);
+      con.classList.toggle("ordenado")
+      // console.log(con);
+   })
 })
