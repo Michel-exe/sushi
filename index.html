@@ -9,7 +9,7 @@
     <title>Platillos</title>
 </head>
 <body>
-    <div class="platillos" id="platillos" style="--i:4;--s:0">
+    <div class="platillos" id="platillos" style="--i:3;--s:0">
         <section>
             <h2>Ordenar Platillo</h2>
             <form action="" id="formPlatillos">
@@ -40,7 +40,7 @@
             </div>
         </section>
     </div>
-    <div class="domicilio" id="domicilio" style="--i:6;--s:0">
+    <div class="domicilio" id="domicilio" style="--i:5;--s:1">
         <section>
             <h2>Servicio a domicilio</h2>
             <form action="">
@@ -52,16 +52,40 @@
                     <label for="inputNombre">Nombre</label>
                     <input type="text" id="inputNombre" minlength="0">
                 </div>
-                <a href="#">Confirmar pedido</a>
-                <i>Al confirmar el pedido favor de enviar la ubicacion via whatsapp</i>
+                <span class="selecPagoSpan" id="selecPagoSpan">
+                    <button class="opcButton" id="pagoTransferencia">Transferencia</button>
+                    <button class="opcButton" id="pagoEfectivo">Efectivo</button>
+                </span>
+                <!-- <a href="#">Confirmar pedido</a>
+                <i>Al confirmar el pedido favor de enviar la ubicacion via whatsapp</i> -->
             </form>
         </section>
     </div>
-    <div class="orden" id="orden" style="--i:5;--s:0">
+    <div class="cantEfectivo" id="cantEfectivo" style="--i:6;--s:0">
         <section>
-            <h2>Orden</h2>
+            <h2>Su pedido ya</h2>
+            <form action="" id="formPlatillos2">
+                <label for="inputPlatillos2">Billete con el que pagara </label>
+                <input type="tel" id="inputPlatillos2" minlength="0" maxlength="2">
+                <span class="selecPagoSpan">
+                    <a href="#" class="opcButton" href="#">Terminar Pedido</a>
+                </span>
+            </form>
+        </section>
+    </div>
+    <div class="orden" id="orden" style="--i:4;--s:1">
+        <section>
+            <h2>
+                <picture>
+                    <img src="media/temaki.png" alt="">
+                </picture>
+                Orden
+                <picture>
+                    <img src="media/teppanyaki.png" alt="">
+                </picture>
+            </h2>
             <nav class="ordenMain" id="ordenMain">
-                <div class="ordenMainCon">
+                <!-- <div class="ordenMainCon">
                     <div>
                         <h3>Brochetas</h3>
                         <span>
@@ -69,7 +93,7 @@
                         </span>
                     </div>
                     <b>$ 150</b>
-                </div>
+                </div> -->
                 <!--
                 <div class="ordenMainCon">
                     <div>
@@ -180,15 +204,24 @@
                     <b>$ 150</b>
                 </div> -->
             </nav>
-            <h3 class="tot">Total aproximado: <b>$550</b></h3>
-            <span id="opcPago">
-                <button class="opcButton" id="pagoDeposito" href="#">Servicio a Domicilio</button>
-                <button class="opcButton" id="pagoDomicilio" href="#">Recoger a Restaurante</button>
+            <h3 class="tot">Total: <b>$ ---</b></h3>
+            <span id="opcPago" class="selecPagoSpan">
+                <button class="opcButton" id="pagoDeposito" href="#">Servicio a Domicilio <i>*</i> </button>
+                <a href="#" class="opcButton" href="#">Recoger a Restaurante</a>
             </span>
+            <i>* El costo de servicio a domicilio es de <b>$15</b></i>
         </section>
     </div>
     <div class="cuerpo">
-        <h1>Sushi Maki</h1>
+        <h1>
+            <picture>
+                <img src="media/temaki.png" alt="">
+            </picture>
+            Sushi Maki
+            <picture>
+                <img src="media/teppanyaki.png" alt="">
+            </picture>
+        </h1>
         <div class="navegacion" id="navegacion">
             <!-- <section>
                 <div>

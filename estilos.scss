@@ -23,7 +23,7 @@ img{
     height: 100%;
     object-fit: contain;
 }
-.platillos,.deposito,.domicilio,.orden{
+.platillos,.deposito,.domicilio,.orden,.cantEfectivo{
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -58,6 +58,27 @@ img{
             font-size: 1.2rem;
             padding-bottom: 10px;
             letter-spacing: 1.5px;
+        }
+        .selecPagoSpan{
+            // background: red;
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            button,a{
+                width: 90%;
+                background: none;
+                border: 0;
+                cursor: pointer;
+                position: relative;
+                color: black;
+                i{
+                    position: absolute;
+                    right: 10px;
+                    top: -10px;
+                }
+            }
         }
         // input{}
         label{font-size: 1rem;}
@@ -126,6 +147,18 @@ img{
     // margin-top: 50px;
     // padding: 300px 0 300px;
     section{
+        h2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            picture{
+                width: 30px;
+                img{
+                    object-fit: contain;
+                }
+            }
+        }
         .ordenMain{
             .ordenMainCon{
                 width: 90%;
@@ -174,19 +207,21 @@ img{
             text-align: right;
             font-weight: 100;
         }
-        >span{
-            width: 90%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            button{
-                width: 90%;
-                background: none;
-                border: 0;
-                cursor: pointer;
-            }
-        }
+        // #opcPago{
+        //     button,a{
+        //         width: 90%;
+        //         background: none;
+        //         border: 0;
+        //         cursor: pointer;
+        //         position: relative;
+        //         color: black;
+        //         i{
+        //             position: absolute;
+        //             right: 10px;
+        //             top: -10px;
+        //         }
+        //     }
+        // }
     }
 }
 .deposito{
@@ -215,15 +250,32 @@ img{
 .domicilio{
     backdrop-filter: blur(12px);
 }
+.cantEfectivo{
+    backdrop-filter: blur(12px);
+    // >span{
+    //     button{
+
+    //     }
+    // }
+}
 .cuerpo{
     background: rgba(255, 255, 255, 1);
     backdrop-filter: blur(10px);
     min-height: 100vh;
     padding: 25px 0 20px;
     h1{
-        text-align: center;
-        color: rgb(0, 0, 194);
+        color: rgb(0, 0, 0);
         font-family: 'Rubik Moonrocks', cursive;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        picture{
+            width: 40px;
+            img{
+                object-fit: contain;
+            }
+        }
     }
     .navegacion{
         padding-top: 15px;
@@ -306,7 +358,7 @@ img{
                         width: 45px;
                         transform: translate(-150% , 10px);
                         // font-size: 15px;
-                        font-size: 1rem;
+                        // font-size: 1rem;
                         background: red;
                         color: white;
                         font-size: 1rem;
@@ -333,6 +385,20 @@ img{
                         }
                         .cancelarPlatillo{
                             transform: translate(10px , 10px);
+                        }
+                    }
+                    &.sinDescrption{
+                        // background: red;
+                        &.ordenado{
+                            // background: rgb(255, 255, 186);
+                            .canPlatillos{
+                                // opacity: 1;
+                                // padding: 0;
+                                transform: translate(-30% , -5px);
+                            }
+                            .cancelarPlatillo{
+                                transform: translate(10px , -5px);
+                            }
                         }
                     }
                 }

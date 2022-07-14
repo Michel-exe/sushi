@@ -147,6 +147,22 @@ let obj = [
       ]
    },
    {
+      name: "ramen",
+      imag: "media/ramen2.png",
+      data: [
+         {
+            plat: "ramen res",
+            ingr: "res, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen",
+            cost: 75
+         },
+         {
+            plat: "ramen surimi",
+            ingr: "surimi en tempura, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen.",
+            cost: 75
+         }
+      ]
+   },
+   {
       name: "teppanyaki ",
       imag: "media/teppanyaki.png",
       data: [
@@ -253,22 +269,6 @@ let obj = [
       ]
    },
    {
-      name: "ramen",
-      imag: "media/ramen.png",
-      data: [
-         {
-            plat: "ramen res",
-            ingr: "res, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen",
-            cost: 75
-         },
-         {
-            plat: "ramen surimi",
-            ingr: "surimi en tempura, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen.",
-            cost: 75
-         }
-      ]
-   },
-   {
       name: "poke",
       imag: "media/poke.png",
       data: [
@@ -353,11 +353,13 @@ const subComponent = ({ plat, cost, ingr }) => {
    // <p>  ${data.plat} - ${data.cost} - ${data.ingr} </p>
    // console.log(plat);
    // console.log(ingr);
+   let subClass=""
    if(ingr==undefined){
       ingr="";
+      subClass="sinDescrption"
    }
    return `
-      <div data-name="${plat}" data-cost=${cost} >
+      <div class="${subClass}" data-name="${plat}" data-cost=${cost} >
          <strong class="canPlatillos" id="canPlatillos">0</strong>
          <span>
             <b>${plat}</b>
@@ -400,6 +402,7 @@ const domicilio = document.getElementById("domicilio");
 const orden = document.getElementById("orden");
 const inputPlatillos = document.getElementById("inputPlatillos");
 const formPlatillos = document.getElementById("formPlatillos");
+const cantEfectivo = document.getElementById("cantEfectivo");
 let elementActual;
 
 formPlatillos.addEventListener("submit", e => {
@@ -513,25 +516,22 @@ document.getElementById("abrirOrden").addEventListener("click", ()=>{
 })
 document.getElementById("opcPago").addEventListener("click", e =>{
    let tar = e.target
+   if(tar.tagName=="BUTTON" && tar.getAttribute("id")=="pagoDeposito"){ domicilio.style.transform= `scale(1)`}
+})
+document.getElementById("selecPagoSpan").addEventListener("click", e =>{
+   let tar = e.target
    if(tar.tagName=="BUTTON"){
-      ((tar.getAttribute("id")=="pagoDeposito") 
-      ? deposito : domicilio).style.transform= `scale(1)`
+      ((tar.getAttribute("id")=="pagoTransferencia") 
+      ? deposito : cantEfectivo).style.transform= `scale(1)`
    }
 })
 domicilio.addEventListener("click", e =>{
    if(e.target.getAttribute("id")=="domicilio"){
-      orden.style.transform=`scale(0)`
       domicilio.style.transform=`scale(0)`
    }
 })
-deposito.addEventListener("click", e =>{
-   if(e.target.getAttribute("id")=="deposito"){
-      orden.style.transform=`scale(0)`
-      deposito.style.transform=`scale(0)`
-   }
-})
-orden.addEventListener("click", e =>{
-   if(e.target.getAttribute("id")=="orden"){
-      orden.style.transform=`scale(0)`
-   }
-})
+deposito.addEventListener("click", e =>{if(e.target.getAttribute("id")=="deposito"){deposito.style.transform=`scale(0)`}})
+orden.addEventListener("click", e =>{if(e.target.getAttribute("id")=="orden"){orden.style.transform=`scale(0)`}})
+platillos.addEventListener("click", e =>{if(e.target.getAttribute("id")=="platillos"){platillos.style.transform=`scale(0)`}})
+
+cantEfectivo.addEventListener("click", e =>{if(e.target.getAttribute("id")=="cantEfectivo"){cantEfectivo.style.transform=`scale(0)`}})
