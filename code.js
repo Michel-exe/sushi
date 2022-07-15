@@ -8,9 +8,8 @@ const ordenesComponent = ({plat,pre,pz,tot}) =>{
              </span>
          </div>
          <b>$ ${tot}</b>
-      </div>
-   `
-}
+      </div>`
+};
 const subComponent = ({ plat, cost, ingr }) => {
    // <p>  ${data.plat} - ${data.cost} - ${data.ingr} </p>
    // console.log(plat);
@@ -54,9 +53,6 @@ const componente = (obj, long) => {
       </section>
          `;
 }
-const scale = (el,bol) =>{
-   el.style.transform= `scale(${bol ? '1' : '0'})`
-}
 let msjComplete='';
 let tmpmsj = "";
 
@@ -68,28 +64,23 @@ const orden = document.getElementById("orden");
 const inputPlatillos = document.getElementById("inputPlatillos");
 const formPlatillos = document.getElementById("formPlatillos");
 const cantEfectivo = document.getElementById("cantEfectivo");
+const recogerPedido = document.getElementById("recogerPedido");
 let elementActual;
 
-const llenarLink = (val,num,bol) => {
+const llenarLink = (val,num) => {
    const apiWhatsapp = 'https://api.whatsapp.com/send?phone=527491060297&text='
    let el = document.querySelectorAll(".linkWhats")
-   // el.forEach(e => console.log(e.getAttribute("data-type")) )
-   let ar = [el[0],el[1],el[2]]
 
-   
-   if(!bol){
-      val = "Hola me gustaria ordenar:+".concat(val)
-   }
+   val = "Hola me gustaria ordenar:+".concat(val)
    val = val.replaceAll(' ','+')
    
-   // console.log(val);
-   // console.log(ar)
-   ar[num].setAttribute("href",apiWhatsapp.concat(val))
+   el[num].setAttribute("href",apiWhatsapp.concat(val))
+
    // console.log(ar[0]);
    // console.log(ar[1]);
    // console.log(ar[2]);
 }
-
+// llenarLink("m",4,false)
 window.addEventListener("submit", e =>{
    e.preventDefault()
 })
@@ -206,6 +197,9 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
       } else{
          cantEfectivo.style.transform =`scale(1)`
          document.getElementById("cantEfectivoVal").focus()
+         document.querySelector(".tot2 b").innerHTML=`
+            ${"$ ".concat(parseInt(document.querySelector(".tot b").innerHTML.replaceAll("$ ",""))+15).concat(" incluye los $15 del envio")}
+         `
       }
 
       tmpmsj = `
@@ -220,16 +214,19 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
 // document.querySelectorAll(".linkWhats")[1].setAttribute("href","###")
 // console.log(document.querySelectorAll(".linkWhats")[1].getAttribute("href"));
 document.getElementById("cantEfectivoVal").addEventListener("keyup", e =>{
-   llenarLink(msjComplete.concat(tmpmsj).concat('$').concat(e.target.value).concat(".  ¿En cuanto tiempo podria pasar?"),1,false)
-   // console.log();
-   // console.log(e.target);
-   // let el = document.querySelectorAll(".linkWhats")[1]
-   // let at = el.getAttribute("href");
-   // el.setAttribute("href",.concat(e.target.value))
-   // console.log(el.getAttribute("href"));
+   llenarLink(msjComplete.concat(tmpmsj).concat('$').concat(e.target.value).concat(".  ¿En cuanto tiempo podria pasar?"),1)
+})
+document.getElementById("recoRestaurante").addEventListener("click",()=>{
+   recogerPedido.style.transform =`scale(1)`;
+   document.getElementById("tiempoPedidoInp").focus();
+})
+document.getElementById("tiempoPedidoInp").addEventListener("keyup", e =>{
+   // console.log(e.target.value);
+   llenarLink(msjComplete.concat(tmpmsj).concat(".  Llego en aproximadamente: ").concat(e.target.value),2)
 })
 domicilio.addEventListener("click", e =>{if(e.target.getAttribute("id")=="domicilio"){domicilio.style.transform=`scale(0)`}})
 deposito.addEventListener("click", e =>{if(e.target.getAttribute("id")=="deposito"){deposito.style.transform=`scale(0)`}})
 orden.addEventListener("click", e =>{if(e.target.getAttribute("id")=="orden"){orden.style.transform=`scale(0)`}})
 platillos.addEventListener("click", e =>{if(e.target.getAttribute("id")=="platillos"){platillos.style.transform=`scale(0)`}})
 cantEfectivo.addEventListener("click", e =>{if(e.target.getAttribute("id")=="cantEfectivo"){cantEfectivo.style.transform=`scale(0)`}})
+recogerPedido.addEventListener("click", e =>{if(e.target.getAttribute("id")=="recogerPedido"){recogerPedido.style.transform=`scale(0)`}})
