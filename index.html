@@ -14,7 +14,7 @@
             <h2>Ordenar Platillo</h2>
             <form action="" id="formPlatillos">
                 <label for="inputPlatillos">¿Cuantas ordenes desea pedir?</label>
-                <input type="tel" id="inputPlatillos" minlength="0" maxlength="2">
+                <input type="tel" id="inputPlatillos" minlength="0" maxlength="2" autocomplete="off">
                 <button type="submit">Ordenar</button>
             </form>
         </section>
@@ -35,15 +35,15 @@
                 <b>BBVA</b>
             </div>
             <div>
-                <span>A continuacion mandarnos la foto de su captura haciendo click en el boton de abajo</span>
-                <a href="#">Confirmar pedido</a>
+                <span>Por favor mandarnos captura de pantalla de que la transferencia ya esta hecha</span>
+                <a href="#" class="linkWhats" data-type="deposito">Confirmar pedido</a>
             </div>
         </section>
     </div>
     <div class="domicilio" id="domicilio" style="--i:5;--s:0">
         <section>
             <h2>Servicio a domicilio</h2>
-            <form action="">
+            <form action="" id="datosDomicilio">
                 <div>
                     <label for="inputReferencias">Referencias</label>
                     <input type="text" id="inputReferencias" minlength="0">
@@ -68,7 +68,7 @@
                 <label for="cantEfectivoVal">Billete con el que pagara </label>
                 <input type="tel" id="cantEfectivoVal" minlength="0">
                 <span class="selecPagoSpan">
-                    <a href="#" class="opcButton" href="#">Terminar Pedido</a>
+                    <a href="#"  data-type="efectivo" class="linkWhats opcButton" href="#">Hacer Pedido</a>
                 </span>
             </form>
         </section>
@@ -207,7 +207,7 @@
             <h3 class="tot">Total: <b>$ ---</b></h3>
             <span id="opcPago" class="selecPagoSpan">
                 <button class="opcButton" id="pagoDeposito" href="#">Servicio a Domicilio <i>*</i> </button>
-                <a href="#" class="opcButton" href="#">Recoger a Restaurante</a>
+                <a href="#" data-type="restaurant" class="linkWhats opcButton" href="#">Recoger en Restaurante</a>
             </span>
             <i>* El costo de servicio a domicilio es de <b>$15</b></i>
         </section>
@@ -251,5 +251,6 @@
         <button id="abrirOrden">Ordenar</button>
     </div>
 </body>
+<script src="data.js"></script>
 <script src="code.js"></script>
 </html>
