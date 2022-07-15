@@ -216,7 +216,7 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
 // document.querySelectorAll(".linkWhats")[1].setAttribute("href","###")
 // console.log(document.querySelectorAll(".linkWhats")[1].getAttribute("href"));
 document.getElementById("cantEfectivoVal").addEventListener("keyup", e =>{
-   llenarLink(msjComplete.concat(tmpmsj).concat(e.target.value),1,true)
+   llenarLink(msjComplete.concat(tmpmsj).concat('$').concat(e.target.value).concat("¿En cuanto tiempo podria pasar?"),1,true)
    // console.log();
    // console.log(e.target);
    // let el = document.querySelectorAll(".linkWhats")[1]
