@@ -199,24 +199,28 @@ document.getElementById("opcPago").addEventListener("click", e =>{
 document.getElementById("selecPagoSpan").addEventListener("click", e =>{
    let tar = e.target
    if(tar.tagName=="BUTTON"){
-      ((tar.getAttribute("id")=="pagoTransferencia") 
-      ? deposito : cantEfectivo).style.transform= `scale(1)`
+      let tmpmsj2 = ["efectivo",1]
+      if(tar.getAttribute("id")=="pagoTransferencia"){
+         deposito.style.transform =`scale(1)`
+         tmpmsj2 = ["transferencia",0]
+      } else{
+         cantEfectivo.style.transform =`scale(1)`
+         document.getElementById("cantEfectivoVal").focus()
+      }
 
-      // console.log(document.getElementById("datosDomicilio"));
-      // console.log(document.getElementById("datosDomicilio")[0]);
-      // console.log(document.getElementById("datosDomicilio")[0].value);
+      tmpmsj = `
+         mi direccion es: ${document.getElementById("datosDomicilio")[0].value}, 
+         mis referecncias son: ${document.getElementById("datosDomicilio")[1].value}
+         a nombre de: ${document.getElementById("datosDomicilio")[2].value}
+         pago mediante: `
 
-      tmpmsj = `vivo por: ${document.getElementById("datosDomicilio")[0].value} a nombre de: ${document.getElementById("datosDomicilio")[1].value} pago mediante: `
-
-      llenarLink(msjComplete.concat(tmpmsj.concat((tar.getAttribute("id")=="pagoTransferencia") ? "transferencia " : "efectivo ")),
-      ((tar.getAttribute("id")=="pagoTransferencia") ? 0 : 1)
-      )
+      llenarLink(msjComplete.concat(tmpmsj.concat(tmpmsj2[0])),tmpmsj2[2])
    }
 })
 // document.querySelectorAll(".linkWhats")[1].setAttribute("href","###")
 // console.log(document.querySelectorAll(".linkWhats")[1].getAttribute("href"));
 document.getElementById("cantEfectivoVal").addEventListener("keyup", e =>{
-   llenarLink(msjComplete.concat(tmpmsj).concat('$').concat(e.target.value).concat("¿En cuanto tiempo podria pasar?"),1,true)
+   llenarLink(msjComplete.concat(tmpmsj).concat('$').concat(e.target.value).concat(".  ¿En cuanto tiempo podria pasar?"),1,false)
    // console.log();
    // console.log(e.target);
    // let el = document.querySelectorAll(".linkWhats")[1]
