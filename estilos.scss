@@ -38,16 +38,25 @@ img{
         box-shadow: 0 0 5px #999;
         svg{
             font-size: 1.9rem;
-            color: black;
+            // color: white;
         }
         &:nth-child(1){
             top: 3.3rem;
+            svg{
+                color: rgb(30, 30, 255);
+            }
         }
         &:nth-child(2){
             top: 6.6rem;
+            svg{
+                color: #1DB954;
+            }
         }
         &:nth-child(3){
             top: 9.9rem;
+            svg{
+                color: rgb(255, 0, 144);
+            }
         }
     }
 }
@@ -282,6 +291,9 @@ img{
     backdrop-filter: blur(10px);
     min-height: 100vh;
     padding: 25px 0 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     h1{
         color: rgb(0, 0, 0);
         font-family: 'Rubik Moonrocks', cursive;
