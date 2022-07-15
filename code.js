@@ -67,9 +67,15 @@ const cantEfectivo = document.getElementById("cantEfectivo");
 const recogerPedido = document.getElementById("recogerPedido");
 let elementActual;
 
+document.querySelectorAll(".linkWhats").forEach(e => console.log(e.getAttribute("data-type")))
+
 const llenarLink = (val,num) => {
    const apiWhatsapp = 'https://api.whatsapp.com/send?phone=527491060297&text='
    let el = document.querySelectorAll(".linkWhats")
+
+   console.log(el[num].getAttribute("data-type"));
+
+   // document.querySelectorAll(".linkWhats").forEach(e => console.log(e.getAttribute("data-type")))
 
    val = "Hola me gustaria ordenar:+".concat(val)
    val = val.replaceAll(' ','+')
@@ -208,7 +214,7 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
          a nombre de: ${document.getElementById("datosDomicilio")[2].value}
          pago mediante: `
 
-      llenarLink(msjComplete.concat(tmpmsj.concat(tmpmsj2[0])),tmpmsj2[2])
+      llenarLink(msjComplete.concat(tmpmsj.concat(tmpmsj2[0])),tmpmsj2[1])
    }
 })
 // document.querySelectorAll(".linkWhats")[1].setAttribute("href","###")
