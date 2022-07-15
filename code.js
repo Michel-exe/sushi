@@ -11,9 +11,6 @@ const ordenesComponent = ({plat,pre,pz,tot}) =>{
       </div>`
 };
 const subComponent = ({ plat, cost, ingr }) => {
-   // <p>  ${data.plat} - ${data.cost} - ${data.ingr} </p>
-   // console.log(plat);
-   // console.log(ingr);
    let subClass=""
    if(ingr==undefined){
       ingr="";
@@ -66,27 +63,15 @@ const formPlatillos = document.getElementById("formPlatillos");
 const cantEfectivo = document.getElementById("cantEfectivo");
 const recogerPedido = document.getElementById("recogerPedido");
 let elementActual;
-
-document.querySelectorAll(".linkWhats").forEach(e => console.log(e.getAttribute("data-type")))
-
 const llenarLink = (val,num) => {
    const apiWhatsapp = 'https://api.whatsapp.com/send?phone=527491060297&text='
    let el = document.querySelectorAll(".linkWhats")
-
-   console.log(el[num].getAttribute("data-type"));
-
-   // document.querySelectorAll(".linkWhats").forEach(e => console.log(e.getAttribute("data-type")))
-
    val = "Hola me gustaria ordenar:+".concat(val)
+   console.log(apiWhatsapp.concat(val));
    val = val.replaceAll(' ','+')
-   
    el[num].setAttribute("href",apiWhatsapp.concat(val))
 
-   // console.log(ar[0]);
-   // console.log(ar[1]);
-   // console.log(ar[2]);
 }
-// llenarLink("m",4,false)
 window.addEventListener("submit", e =>{
    e.preventDefault()
 })
@@ -108,7 +93,6 @@ formPlatillos.addEventListener("submit", e => {
       } else {
          alert("Por favor complete el campo correctamente")
       }
-      // console.log(elementActual);
    }
    inputPlatillos.value = "";
 })
@@ -135,7 +119,6 @@ document.querySelectorAll(".navegacion section > div").forEach(dl => {
 })
 document.querySelectorAll("#navegacion > section nav div").forEach(pl => {
    pl.addEventListener("click", e => {
-      // console.clear()
       let tar = e.target;
       let tag = e.target.tagName;
       let con = (
@@ -144,22 +127,12 @@ document.querySelectorAll("#navegacion > section nav div").forEach(pl => {
             : (tag == "DIV") ? tar : (tag == "path")
                ? tar.parentElement.parentElement.parentElement
                : tar.parentElement.parentElement)
-      
       if (tag == "path" || tag == "svg" || tag == "STRONG") {
          con.classList.remove("ordenado");
       } else {
          elementActual = con;
          inputPlatillos.focus()
          platillos.style.transform = 'scale(1)'
-         // if (!con.classList.contains("ordenado")) {
-         // } else {
-         //    // if (tag == "path" || tag == "SVG" || tag == "STRONG") {
-         //    //    con.classList.remove("ordenado");
-         //    // } else {
-         //       inputPlatillos.focus()
-         //       platillos.style.transform = 'scale(1)'
-         //    // }
-         // }
       }
    })
 })
@@ -183,11 +156,10 @@ document.getElementById("abrirOrden").addEventListener("click", ()=>{
    if(totfin > 0){
       document.querySelector(".tot b").innerHTML=`$ ${totfin}`
       orden.style.transform="scale(1)"
+      llenarLink(msjComplete.concat("*Recojo en el Restaurante*"),2)
    } else{
       alert("Por favor ordene algo")
    }
-   llenarLink(msjComplete.concat("Recojo en el restaurante"),2)
-   // console.log(msjComplete);
 })
 document.getElementById("opcPago").addEventListener("click", e =>{
    let tar = e.target
@@ -196,10 +168,10 @@ document.getElementById("opcPago").addEventListener("click", e =>{
 document.getElementById("selecPagoSpan").addEventListener("click", e =>{
    let tar = e.target
    if(tar.tagName=="BUTTON"){
-      let tmpmsj2 = ["efectivo",1]
+      let tmpmsj2 = ["*Efectivo*",1]
       if(tar.getAttribute("id")=="pagoTransferencia"){
          deposito.style.transform =`scale(1)`
-         tmpmsj2 = ["transferencia",0]
+         tmpmsj2 = ["*Transferencia*. ¿En cuanto tiempo podria pasar?",0]
       } else{
          cantEfectivo.style.transform =`scale(1)`
          document.getElementById("cantEfectivoVal").focus()
@@ -207,32 +179,24 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
             ${"$ ".concat(parseInt(document.querySelector(".tot b").innerHTML.replaceAll("$ ",""))+15).concat(" incluye los $15 del envio")}
          `
       }
-
-      tmpmsj = `
-         mi direccion es: ${document.getElementById("datosDomicilio")[0].value}, 
-         mis referecncias son: ${document.getElementById("datosDomicilio")[1].value}
-         a nombre de: ${document.getElementById("datosDomicilio")[2].value}
-         pago mediante: `
-
-      llenarLink(msjComplete.concat(tmpmsj.concat(tmpmsj2[0])),tmpmsj2[1])
+      tmpmsj = ` Mi direccion es: *${document.getElementById("datosDomicilio")[0].value}*, mis referecncias son: *${document.getElementById("datosDomicilio")[1].value}* a nombre de: *${document.getElementById("datosDomicilio")[2].value}*. Pago mediante: ${tmpmsj2[0]} `
+      llenarLink(msjComplete.concat(tmpmsj),tmpmsj2[1])
    }
 })
-// document.querySelectorAll(".linkWhats")[1].setAttribute("href","###")
-// console.log(document.querySelectorAll(".linkWhats")[1].getAttribute("href"));
 document.getElementById("cantEfectivoVal").addEventListener("keyup", e =>{
-   llenarLink(msjComplete.concat(tmpmsj).concat('$').concat(e.target.value).concat(".  ¿En cuanto tiempo podria pasar?"),1)
+   llenarLink(msjComplete.concat(tmpmsj).concat('Con la cantidad de *$').concat(e.target.value).concat("*. ¿En cuanto tiempo vendria?"),1)
 })
 document.getElementById("recoRestaurante").addEventListener("click",()=>{
    recogerPedido.style.transform =`scale(1)`;
    document.getElementById("tiempoPedidoInp").focus();
 })
 document.getElementById("tiempoPedidoInp").addEventListener("keyup", e =>{
-   // console.log(e.target.value);
-   llenarLink(msjComplete.concat(tmpmsj).concat(".  Llego en aproximadamente: ").concat(e.target.value),2)
+   llenarLink(msjComplete.concat(tmpmsj + "*Recojo en el Restaurante*").concat(".  Llego en aproximadamente: *").concat(e.target.value).concat("*") ,2)
 })
-domicilio.addEventListener("click", e =>{if(e.target.getAttribute("id")=="domicilio"){domicilio.style.transform=`scale(0)`}})
-deposito.addEventListener("click", e =>{if(e.target.getAttribute("id")=="deposito"){deposito.style.transform=`scale(0)`}})
-orden.addEventListener("click", e =>{if(e.target.getAttribute("id")=="orden"){orden.style.transform=`scale(0)`}})
-platillos.addEventListener("click", e =>{if(e.target.getAttribute("id")=="platillos"){platillos.style.transform=`scale(0)`}})
-cantEfectivo.addEventListener("click", e =>{if(e.target.getAttribute("id")=="cantEfectivo"){cantEfectivo.style.transform=`scale(0)`}})
-recogerPedido.addEventListener("click", e =>{if(e.target.getAttribute("id")=="recogerPedido"){recogerPedido.style.transform=`scale(0)`}})
+document.querySelectorAll(".dialog").forEach(di =>{
+   di.addEventListener("click", e =>{
+      if(["platillos","deposito","domicilio","cantEfectivo","orden","recogerPedido"].some(n=> n==e.target.getAttribute("id"))){
+         e.target.style.transform=`scale(0)`
+      }
+   })
+})
