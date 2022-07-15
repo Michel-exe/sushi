@@ -191,7 +191,7 @@ document.getElementById("recoRestaurante").addEventListener("click",()=>{
    document.getElementById("tiempoPedidoInp").focus();
 })
 document.getElementById("tiempoPedidoInp").addEventListener("change", e =>{
-   console.log(e.target.value);
+   // console.log(e.target.value);
    llenarLink(msjComplete.concat(tmpmsj + "*Recojo en el Restaurante*").concat(".  Llego aproximadamente a las: *").concat(e.target.value).concat("*") ,2)
 })
 document.querySelectorAll(".dialog").forEach(di =>{
