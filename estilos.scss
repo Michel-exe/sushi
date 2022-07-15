@@ -23,6 +23,34 @@ img{
     height: 100%;
     object-fit: contain;
 }
+.fix{
+    a{
+        width: 2.7rem;
+        height: 2.7rem;
+        position: fixed;
+        display: grid;
+        place-content: center;
+        right: 0;
+        z-index: 2;
+        // background: blue;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 5px #999;
+        svg{
+            font-size: 1.9rem;
+            color: black;
+        }
+        &:nth-child(1){
+            top: 3.3rem;
+        }
+        &:nth-child(2){
+            top: 6.6rem;
+        }
+        &:nth-child(3){
+            top: 9.9rem;
+        }
+    }
+}
 .dialog{
     width: 100%;
     height: 100vh;

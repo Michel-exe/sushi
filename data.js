@@ -125,11 +125,11 @@ let obj = [
       imag: "media/ramen.png",
       data: [
          {
-            plat: "pasta schezuan hiyoko",
+            plat: "Schezuan hiyoko (pollo)",
             ingr: "pasta, pollo, zanahoria, calabaza, brocoli, champiñones, pimientos y cebollin.",
             cost: 65
          }, {
-            plat: "pasta schezuan gyuniku",
+            plat: "Schezuan gyuniku (res)",
             ingr: "pasta, res, zanahoria, calabaza, brocoli, champiñones, pimientos y cebollin.",
             cost: 70
          }
@@ -163,7 +163,7 @@ let obj = [
             ingr: "verduras a la plancha, pollo, champiñones, calabaza, zanahoria, brocoli, pimiento, cebollin y arroz gohan.",
             cost: 50
          }, {
-            plat: "teppanyaki gyuniku",
+            plat: "teppanyaki gyuniku (res)",
             ingr: "verduras a la plancha, res, champiñones, zanahoria, brocoli, pimiento y cebollin.",
             cost: 55
          },
@@ -254,11 +254,11 @@ let obj = [
       data: [
          {
             plat: "poke amai toriniku",
-            ingr: "pollo tempura en teriyaki, mango, pepino, ajonjolin, arroz gohan y alga nori.",
+            ingr: "pollo tempura en teriyaki, mango, pepino, ajonjoli, arroz gohan y alga nori.",
             cost: 65
          }, {
             plat: "poke surimi terivyaki",
-            ingr: "surimi tempura en teriyaki, mango, pepino, ajonjolin, arroz gohan y alga nori.",
+            ingr: "surimi tempura en teriyaki, mango, pepino, ajonjoli, arroz gohan y alga nori.",
             cost: 65
          }
       ]
