@@ -69,7 +69,7 @@ const llenarLink = (val,num) => {
    let el = document.querySelectorAll(".linkWhats")
    val = "Hola me gustaria ordenar:+".concat(val)
    console.log(apiWhatsapp.concat(val));
-   val = val.replaceAll('#',' no.')
+   val = val.replaceAll('#','%23')
    val = val.replaceAll(' ','+')
    el[num].setAttribute("href",apiWhatsapp.concat(val))
 
