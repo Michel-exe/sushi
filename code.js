@@ -181,12 +181,12 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
             ${"$ ".concat(parseInt(document.querySelector(".tot b").innerHTML.replaceAll("$ ",""))+15)}
          `
       }
-      tmpmsj = ` Mi direccion es: *${document.getElementById("datosDomicilio")[0].value}*, mis referecncias son: *${document.getElementById("datosDomicilio")[1].value}* a nombre de: *${document.getElementById("datosDomicilio")[2].value}*. Pago mediante: ${tmpmsj2[0]} `
+      tmpmsj = ` *Direccion:* ${document.getElementById("datosDomicilio")[0].value}, *Referecncia:* ${document.getElementById("datosDomicilio")[1].value} *Nombre:* ${document.getElementById("datosDomicilio")[2].value}. *Pago:* ${tmpmsj2[0]} `
       llenarLink(msjComplete.concat(tmpmsj),tmpmsj2[1])
    }
 })
 document.getElementById("cantEfectivoVal").addEventListener("keyup", e =>{
-   llenarLink(msjComplete.concat(tmpmsj).concat('Con la cantidad de *$').concat(e.target.value).concat("*. ¿En cuanto tiempo vendria?"),1)
+   llenarLink(msjComplete.concat(tmpmsj).concat(" - *Total a pagar: *"+document.querySelector(".tot2 b").textContent).concat('Con la cantidad de *$').concat(e.target.value).concat("*. ¿En qué tiempo estaría?"),1)
 })
 document.getElementById("recoRestaurante").addEventListener("click",()=>{
    recogerPedido.style.transform =`scale(1)`;
@@ -194,7 +194,7 @@ document.getElementById("recoRestaurante").addEventListener("click",()=>{
 })
 document.getElementById("tiempoPedidoInp").addEventListener("change", e =>{
    // console.log(e.target.value);
-   llenarLink(msjComplete.concat(tmpmsj + "*Recojo en el Restaurante*").concat(".  Llego aproximadamente a las: *").concat(e.target.value).concat("*") ,2)
+   llenarLink(msjComplete.concat(" *Total a pagar:* "+document.querySelector(".tot b").textContent).concat(tmpmsj + " *Recojo en el Restaurante*").concat(". *Llego  a las:* ").concat(e.target.value) ,2)
 })
 document.querySelectorAll(".dialog").forEach(di =>{
    di.addEventListener("click", e =>{
@@ -203,3 +203,11 @@ document.querySelectorAll(".dialog").forEach(di =>{
       }
    })
 })
+
+/*
+*
+Hola me gustaria ordenar: 1-salmontino, 1-kioto roll, 1-california maki.  Direccion: Rincón de las viletas el refugio  no. 5. Referencia: Carpinteria. Nombre: Emmanuel.
+Total a pagar: " el total de la orden.
+Pago: Efectivo, con la cantidad de $500. ¿En que tiempo estaría?
+*
+*/
