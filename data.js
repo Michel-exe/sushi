@@ -59,7 +59,7 @@ let obj = [
       ]
    },
    {
-      name: "sushi empanizado",
+      name: "sushi empanizados",
       imag: "media/sushi3.png",
       data: [
          {
@@ -87,7 +87,7 @@ let obj = [
             ingr: "Camaron empanizado, aguacate, philadelphia, empanizado por fuera y chipotle.",
             cost: 70
          }, {
-            plat: "dishi maki",
+            plat: "oishi maki",
             ingr: "Surimi empanizado, aguacate, queso manchego con salsa dulce picante, empanizado por fuera.",
             cost: 75
          }, {
@@ -235,15 +235,15 @@ let obj = [
       data: [
          {
             plat: "sushi empanizados",
-            ingr: "charola sushi empanizado 30 piezas",
+            ingr: "Charola Sushi Hot Roll empalizado 30 piezas con 3 aderezos diferentes.",
             cost: 200
          }, {
             plat: "sushi surtidos",
-            ingr: "charola sushi empanizado y frio 40 piezas",
+            ingr: "charola sushi Hot Roll empanizado y frio 40 piezas con 3 aderezos diferentes",
             cost: 350
          }, {
             plat: "sushi surtidos",
-            ingr: "charola sushi empanizado y frio 30 piezas",
+            ingr: "charola sushi Hot Roll empanizado y frio 30 piezas con 3 aderezos diferentes",
             cost: 270
          }
       ]
@@ -257,7 +257,7 @@ let obj = [
             ingr: "pollo tempura en teriyaki, mango, pepino, ajonjoli, arroz gohan y alga nori.",
             cost: 65
          }, {
-            plat: "poke surimi terivyaki",
+            plat: "poke surimi teriyaki",
             ingr: "surimi tempura en teriyaki, mango, pepino, ajonjoli, arroz gohan y alga nori.",
             cost: 65
          }
@@ -267,13 +267,13 @@ let obj = [
       name: "bebidas",
       imag: "media/beer.png",
       data: [
-         { plat: "nieve flotante limon", cost: 38 },
+         { plat: "nieve flotante limon", ingr: "bebida gasificación a base de 2 bolas de nieve de limón.", cost: 38 },
          { plat: "jarra de te helado", ingr: "Negro", cost: 40 },
          { plat: "vaso de te helado", ingr: "Negro", cost: 15 },
-         { plat: "jarra de calpiña", cost: 50 },
-         { plat: "vaso de calpiña", cost: 25 },
+         { plat: "jarra de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 50 },
+         { plat: "vaso de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 25 },
          { plat: "refresco lata", cost: 20 },
-         { plat: "sake", cost: 15 },
+         { plat: "sake", ingr: "Vino de arroz", cost: 15 },
       ]
    },
    {
@@ -305,7 +305,6 @@ let obj = [
          { plat: "extra salsa de anguila", cost: 10 },
          { plat: "extra aderezo de chipotle", cost: 10 },
          { plat: "extra pasta tampico", cost: 15 },
-         { plat: "extra wasabi", cost: 10 },
          { plat: "chiles toreados", cost: 10 },
          { plat: "extra wasabi", cost: 10 },
          { plat: "ingrediente extra", cost: 10 }

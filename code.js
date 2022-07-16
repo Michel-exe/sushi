@@ -63,11 +63,13 @@ const formPlatillos = document.getElementById("formPlatillos");
 const cantEfectivo = document.getElementById("cantEfectivo");
 const recogerPedido = document.getElementById("recogerPedido");
 let elementActual;
+
 const llenarLink = (val,num) => {
    const apiWhatsapp = 'https://api.whatsapp.com/send?phone=527491060297&text='
    let el = document.querySelectorAll(".linkWhats")
    val = "Hola me gustaria ordenar:+".concat(val)
    console.log(apiWhatsapp.concat(val));
+   val = val.replaceAll('#',' no.')
    val = val.replaceAll(' ','+')
    el[num].setAttribute("href",apiWhatsapp.concat(val))
 
@@ -176,7 +178,7 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
          cantEfectivo.style.transform =`scale(1)`
          document.getElementById("cantEfectivoVal").focus()
          document.querySelector(".tot2 b").innerHTML=`
-            ${"$ ".concat(parseInt(document.querySelector(".tot b").innerHTML.replaceAll("$ ",""))+15).concat(" incluye los $15 del envio")}
+            ${"$ ".concat(parseInt(document.querySelector(".tot b").innerHTML.replaceAll("$ ",""))+15)}
          `
       }
       tmpmsj = ` Mi direccion es: *${document.getElementById("datosDomicilio")[0].value}*, mis referecncias son: *${document.getElementById("datosDomicilio")[1].value}* a nombre de: *${document.getElementById("datosDomicilio")[2].value}*. Pago mediante: ${tmpmsj2[0]} `
