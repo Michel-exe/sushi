@@ -198,7 +198,13 @@ document.getElementById("recoRestaurante").addEventListener("click",()=>{
 })
 
 document.getElementById("cantEfectivoVal").addEventListener("keyup", e =>llenarLink(`${msjComplete} ${tmpmsj} Con la cantidad de: *$${e.target.value}*. ¿En qué tiempo estaría? `,1))
-document.getElementById("tiempoPedidoInp").addEventListener("change", e =>llenarLink(`${msjComplete} *Total a pagar:* ${document.querySelector(".tot b").textContent} ${tmpmsj} *Recojo en el Restaurante.* *Llego  a las:* ${e.target.value}`,2))
+document.getElementById("tiempoPedidoInp").addEventListener("change", e =>{
+   let cad = `${msjComplete} *Total a pagar:* ${document.querySelector(".tot b").textContent} ${tmpmsj} *Recojo en el Restaurante.* *Llego  a las:* ${e.target.value}`
+   cad=cad.replaceAll("*Pago:*","")
+   cad=cad.replaceAll("Transferencia","")
+   cad=cad.replaceAll("Efectivo","")
+   llenarLink(cad,2)
+})
 
 document.querySelectorAll(".dialog").forEach(di =>{
    di.addEventListener("click", e =>{
