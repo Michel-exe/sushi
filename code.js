@@ -70,7 +70,13 @@ const llenarLink = (val,num) => {
    val = "Hola me gustaria ordenar:+".concat(val)
    console.log(apiWhatsapp.concat(val));
    val = val.replaceAll('#','%23')
+   val = val.replaceAll('/','%2F')
+   val = val.replaceAll('.','%2E')
+   val = val.replaceAll('$','%24')
+   val = val.replaceAll('"','%22')
+   val = val.replaceAll('\\','%5C')
    val = val.replaceAll(' ','+')
+
    el[num].setAttribute("href",apiWhatsapp.concat(val))
 
 }
@@ -171,10 +177,10 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
    let tar = e.target
    if(tar.tagName=="BUTTON"){
       // .concat()
-      let tmpmsj2 = ["- *Total a pagar: *"+document.querySelector(".tot2 b").textContent+ " - *Pago:* Efectivo. ¿En qué tiempo estaría?",1]
+      let tmpmsj2 = ["Efectivo",1]
       if(tar.getAttribute("id")=="pagoTransferencia"){
          deposito.style.transform =`scale(1)`
-         tmpmsj2 = ["- *Total a pagar: *"+document.querySelector(".tot2 b").textContent+ " - *Pago:* Transferencia. ¿En qué tiempo estaría?",0]
+         tmpmsj2 = ["Transferencia",0]
       } else{
          cantEfectivo.style.transform =`scale(1)`
          document.getElementById("cantEfectivoVal").focus()
@@ -182,23 +188,18 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
             ${"$ ".concat(parseInt(document.querySelector(".tot b").innerHTML.replaceAll("$ ",""))+15)}
          `
       }
-      tmpmsj = ` *Direccion:* ${document.getElementById("datosDomicilio")[0].value}
-       *Referecncia:* ${document.getElementById("datosDomicilio")[1].value}
-       *Nombre:* ${document.getElementById("datosDomicilio")[2].value}.* ${tmpmsj2[0]}`
+      tmpmsj = ` *Dirección:* ${document.getElementById("datosDomicilio")[0].value} *Referecncia:* ${document.getElementById("datosDomicilio")[1].value} *Nombre:* ${document.getElementById("datosDomicilio")[2].value}.* - *Total a pagar:* ${document.querySelector(".tot2 b").textContent} - *Pago:* ${tmpmsj2[0]}.`
       llenarLink(msjComplete.concat(tmpmsj),tmpmsj2[1])
    }
-})
-document.getElementById("cantEfectivoVal").addEventListener("keyup", e =>{
-   llenarLink(msjComplete.concat(tmpmsj).concat('Con la cantidad de *$').concat(e.target.value).concat("*. ¿En qué tiempo estaría?"),1)
 })
 document.getElementById("recoRestaurante").addEventListener("click",()=>{
    recogerPedido.style.transform =`scale(1)`;
    document.getElementById("tiempoPedidoInp").focus();
 })
-document.getElementById("tiempoPedidoInp").addEventListener("change", e =>{
-   // console.log(e.target.value);
-   llenarLink(msjComplete.concat(" *Total a pagar:* "+document.querySelector(".tot b").textContent).concat(tmpmsj + " *Recojo en el Restaurante*").concat(". *Llego  a las:* ").concat(e.target.value) ,2)
-})
+
+document.getElementById("cantEfectivoVal").addEventListener("keyup", e =>llenarLink(`${msjComplete} ${tmpmsj} Con la cantidad de: *$${e.target.value}*. ¿En qué tiempo estaría? `,1))
+document.getElementById("tiempoPedidoInp").addEventListener("change", e =>llenarLink(`${msjComplete} *Total a pagar:* ${document.querySelector(".tot b").textContent} ${tmpmsj} *Recojo en el Restaurante.* *Llego  a las:* ${e.target.value}`,2))
+
 document.querySelectorAll(".dialog").forEach(di =>{
    di.addEventListener("click", e =>{
       if(["platillos","deposito","domicilio","cantEfectivo","orden","recogerPedido"].some(n=> n==e.target.getAttribute("id"))){
