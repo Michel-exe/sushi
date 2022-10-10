@@ -6,11 +6,11 @@ let obj = [
          {
             plat: "salmontino",
             ingr: "Pasta tampico, philadelphia, pepino, zanahoria, por fuera salmón ahumado y aguacate.",
-            cost: 85
+            cost: 90
          }, {
             plat: "kioto roll",
             ingr: "Salmon sellado, philadelphia, pasta tampico y aguacate.",
-            cost: 85
+            cost: 90
          }, {
             plat: "cangrejo roll",
             ingr: "Surimi empanizado, pepino, aguacate, alga por fuera y champiñon.",
@@ -34,7 +34,7 @@ let obj = [
          }, {
             plat: "green roll",
             ingr: "Camaron, pepino, aguacate, envuelto en kiwi con salsa de anguila.",
-            cost: 70
+            cost: 75
          }, {
             plat: "amai maki",
             ingr: "Surimi empanizado, aguacate, philadelphia, pepino por fuera con salsa dulce picante.",
@@ -50,7 +50,7 @@ let obj = [
          }, {
             plat: "palto maki",
             ingr: "Camarón, pepino, philadelphia, aguacate por fuera y ajonjolí.",
-            cost: 65
+            cost: 70
          }, {
             plat: "california maki",
             ingr: "Camaron, pepino, aguacate y ajonjolí por fuera.",
@@ -93,7 +93,7 @@ let obj = [
          }, {
             plat: "queso maki",
             ingr: "Philadelphia, queso manchego, empanizado. por fuera",
-            cost: 60
+            cost: 65
          }
       ]
    },
@@ -234,16 +234,16 @@ let obj = [
       imag: "media/bento.png",
       data: [
          {
-            plat: "sushi empanizados",
-            ingr: "Charola Sushi Hot Roll empalizado 30 piezas con 3 aderezos diferentes.",
+            plat: "sushi empanizado",
+            ingr: "Charola 30 piezas Hot Roll mas 3 aderezos.",
             cost: 200
          }, {
-            plat: "sushi surtidos",
-            ingr: "charola sushi empanizado y frio 40 piezas con 3 aderezos diferentes",
+            plat: "sushi surtido",
+            ingr: "charola 40 piezas mas 3 aderezos",
             cost: 350
          }, {
-            plat: "sushi surtidos",
-            ingr: "charola sushi empanizado y frio 30 piezas con 3 aderezos diferentes",
+            plat: "sushi surtido",
+            ingr: "charola 30 piezas mas 3 aderezos",
             cost: 270
          }
       ]
@@ -270,6 +270,8 @@ let obj = [
          { plat: "nieve flotante", ingr: "bebida gasificación a base de 2 bolas de nieve de limón.", cost: 38 },
          { plat: "jarra de te helado", ingr: "Negro", cost: 40 },
          { plat: "vaso de te helado", ingr: "Negro", cost: 15 },
+         { plat: "calpis chela", cost: 40 },
+         { plat: "calpis sabor", cost: 40 },
          { plat: "jarra de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 50 },
          { plat: "vaso de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 25 },
          { plat: "refresco lata", cost: 20 },
