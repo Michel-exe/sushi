@@ -176,7 +176,6 @@ document.getElementById("opcPago").addEventListener("click", e =>{
 document.getElementById("selecPagoSpan").addEventListener("click", e =>{
    let tar = e.target
    if(tar.tagName=="BUTTON"){
-      // .concat()
       let tmpmsj2 = ["Efectivo",1]
       if(tar.getAttribute("id")=="pagoTransferencia"){
          deposito.style.transform =`scale(1)`
@@ -188,7 +187,7 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
             ${"$ ".concat(parseInt(document.querySelector(".tot b").innerHTML.replaceAll("$ ",""))+15)}
          `
       }
-      tmpmsj = ` *Dirección:* ${document.getElementById("datosDomicilio")[0].value} *Referencia:* ${document.getElementById("datosDomicilio")[1].value} *Nombre:* ${document.getElementById("datosDomicilio")[2].value}.* - *Total a pagar:* ${document.querySelector(".tot2 b").textContent} - *Pago:* ${tmpmsj2[0]}.`
+      tmpmsj = ` *Dirección:* ${document.getElementById("datosDomicilio")[0].value} *Referencia:* ${document.getElementById("datosDomicilio")[1].value} *Nombre:* ${document.getElementById("datosDomicilio")[2].value}.* - *Total a pagar:* ${document.querySelector(".tot b").textContent} - *Pago:* ${tmpmsj2[0]}.`
       llenarLink(msjComplete.concat(tmpmsj),tmpmsj2[1])
    }
 })
@@ -213,11 +212,3 @@ document.querySelectorAll(".dialog").forEach(di =>{
       }
    })
 })
-
-/*
-*
-Hola me gustaria ordenar: 1-salmontino, 1-kioto roll, 1-california maki.  Direccion: Rincón de las viletas el refugio  no. 5. Referencia: Carpinteria. Nombre: Emmanuel.
-Total a pagar: " el total de la orden.
-Pago: Efectivo, con la cantidad de $500. ¿En que tiempo estaría?
-*
-*/
