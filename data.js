@@ -219,6 +219,22 @@ let obj = [
       ]
    },
    {
+      name: "gyozas",
+      imag: "media/onigiri2.png",
+      data: [
+         {
+            plat: "onigri empanizado 2pz",
+            ingr: "2 Piezas, Res, chiles tornados manchego.",
+            cost: 70
+         },
+         {
+            plat: "onigri frio 2pz",
+            ingr: "2 Piezas, pepino, aguacate, camarón y ajonjoli por fuera.",
+            cost: 60
+         },
+      ]
+   },
+   {
       name: "tempura",
       imag: "media/poke.png",
       data: [
@@ -234,15 +250,15 @@ let obj = [
       imag: "media/bento.png",
       data: [
          {
-            plat: "sushi empanizado",
+            plat: "sushi empanizado 30pz",
             ingr: "Charola 30 piezas Hot Roll mas 3 aderezos.",
             cost: 200
          }, {
-            plat: "sushi surtido",
+            plat: "sushi surtido 40pz",
             ingr: "charola 40 piezas mas 3 aderezos",
             cost: 350
          }, {
-            plat: "sushi surtido",
+            plat: "sushi surtido 30pz",
             ingr: "charola 30 piezas mas 3 aderezos",
             cost: 270
          }
