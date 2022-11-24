@@ -219,16 +219,16 @@ let obj = [
       ]
    },
    {
-      name: "gyozas",
+      name: "onigiri",
       imag: "media/onigiri2.png",
       data: [
          {
-            plat: "onigri empanizado 2pz",
+            plat: "onigiri empanizado 2pz",
             ingr: "2 Piezas, Res, chiles tornados manchego.",
             cost: 70
          },
          {
-            plat: "onigri frio 2pz",
+            plat: "onigiri frio 2pz",
             ingr: "2 Piezas, pepino, aguacate, camarón y ajonjoli por fuera.",
             cost: 60
          },
