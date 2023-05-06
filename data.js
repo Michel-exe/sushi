@@ -36,6 +36,10 @@ let obj = [
             ingr: "Camaron, pepino, aguacate, envuelto en kiwi con salsa de anguila.",
             cost: 75
          }, {
+            plat: "Masago Roll",
+            ingr: "Camarón, pepino, philadelphia y masago por fuera",
+            cost: 90
+         }, {
             plat: "amai maki",
             ingr: "Surimi empanizado, aguacate, philadelphia, pepino por fuera con salsa dulce picante.",
             cost: 70
@@ -46,7 +50,7 @@ let obj = [
          }, {
             plat: "tropical roll",
             ingr: "Surimi, pepino, philadelphia, envuelto en mango con salsa de anguila.",
-            cost: 65
+            cost: 70
          }, {
             plat: "palto maki",
             ingr: "Camarón, pepino, philadelphia, aguacate por fuera y ajonjolí.",
@@ -69,7 +73,7 @@ let obj = [
          }, {
             plat: "mar y tierra",
             ingr: "Camaron, res, pollo en teriyaki, manchego, empanizado por fuera.",
-            cost: 80
+            cost: 85
          }, {
             plat: "dragon roll",
             ingr: "Res a la plancha, queso manchego, chiles toreados, empanizado por fuera.",
@@ -104,11 +108,11 @@ let obj = [
          {
             plat: "yakimeshi verdura",
             ingr: "arroz frito, zanahoria, calabaza, huevo.",
-            cost: 45
+            cost: 50
          }, {
             plat: "yakimeshi hiyoko (pollo)",
             ingr: "arroz frito, pollo, zanahoria, calabaza, huevo.",
-            cost: 50
+            cost: 55
          }, {
             plat: "yakimeshi gyuniku (res)",
             ingr: "arroz frito, res, zanahoria, calabaza, huevo y arroz gohan.",
@@ -240,6 +244,10 @@ let obj = [
       data: [
          {
             plat: "roshy roll",
+            ingr: "Pollo en tempura, philadelphia, por fuera en tempura con salsa de águila y galleta de arroz.",
+            cost: 85
+         }, {
+            plat: "Kurakka Roll",
             ingr: "surimi, aguacate por fuera en tempura con pasta tampico.",
             cost: 80
          },
@@ -284,14 +292,15 @@ let obj = [
       imag: "media/beer.png",
       data: [
          { plat: "nieve flotante", ingr: "bebida gasificación a base de 2 bolas de nieve de limón.", cost: 38 },
-         { plat: "jarra de te helado", ingr: "Negro", cost: 40 },
-         { plat: "vaso de te helado", ingr: "Negro", cost: 15 },
+         { plat: "jarra de te helado", ingr: "Negro", cost: 45 },
+         { plat: "vaso de te helado", ingr: "Negro", cost: 20 },
          { plat: "calpis chela", cost: 40 },
          { plat: "calpis sabor", cost: 40 },
          { plat: "jarra de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 50 },
          { plat: "vaso de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 25 },
+         { plat: "calpis sabor (jarra)", cost: 110},
          { plat: "refresco lata", cost: 20 },
-         { plat: "sake", ingr: "Vino de arroz", cost: 15 },
+         { plat: "sake", ingr: "Vino de arroz", cost: 20 },
       ]
    },
    {
@@ -320,12 +329,13 @@ let obj = [
       name: "extras",
       imag: "media/takoyaki.png",
       data: [
-         { plat: "extra salsa de anguila", cost: 10 },
-         { plat: "extra aderezo de chipotle", cost: 10 },
-         { plat: "extra pasta tampico", cost: 15 },
-         { plat: "chiles toreados", cost: 10 },
-         { plat: "extra wasabi", cost: 10 },
-         { plat: "ingrediente extra", cost: 10 }
+         { plat: "extra salsa de anguila", cost: 15 },
+         { plat: "extra aderezo de chipotle", cost: 15 },
+         { plat: "extra pasta tampico", cost: 20 },
+         { plat: "chiles toreados", cost: 15 },
+         { plat: "extra wasabi", cost: 15 },
+         { plat: "ingrediente extra", cost: 15 },
+         { plat: "extra siracha", cost: 15 }
       ]
    },
 ]
