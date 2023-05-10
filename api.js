@@ -1,7 +1,7 @@
 [
    {
-      "idCat": 'idCat1',
-      "category": 'Hoteleria',
+      "idCat": "idCat1",
+      "category": "Hoteleria",
       "data": [
          {
             "id": "estab1",
@@ -15,8 +15,8 @@
          }
       ]
    }, {
-      "idCat": 'idCat9',
-      "category": 'Comida Mexicana',
+      "idCat": "idCat9",
+      "category": "Comida Mexicana",
       "data": [
          {
             "id": "estab2",
@@ -39,8 +39,8 @@
             },
          }]
    }, {
-      "idCat": 'idCat2',
-      "category": 'Restaurant',
+      "idCat": "idCat2",
+      "category": "Restaurant",
       "data": [{
          "id": "estab4",
          "name": "san cayetano ",
@@ -72,9 +72,8 @@
          },
       }]
    }, {
-      "idCat": 'idCat3',
-      "category": 'Bares',
-      "can": {},
+      "idCat": "idCat3",
+      "category": "Bares",
       "data": [
          {
             "id": 5,
@@ -88,9 +87,8 @@
          },
       ]
    }, {
-      "idCat": 'idCat4',
-      "category": 'Demas',
-      "can": {},
+      "idCat": "idCat4",
+      "category": "Demas",
       "data": [
          {
             "id": 8,
@@ -104,9 +102,8 @@
          }
       ]
    }, {
-      "idCat": 'idCat5',
-      "category": 'Pulqueria',
-      "can": {},
+      "idCat": "idCat5",
+      "category": "Pulqueria",
       "data": [
          {
             "id": 6,
