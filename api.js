@@ -11,7 +11,7 @@
             "loc": {
                "latitude": 19.493037,
                "longitude": -98.535733
-            },
+            }
          }
       ]
    }, {
@@ -26,7 +26,7 @@
             "loc": {
                "latitude": 19.493037,
                "longitude": -98.535733
-            },
+            }
          },
          {
             "id": "estab3",
@@ -36,7 +36,7 @@
             "loc": {
                "latitude": 19.487706104427147,
                "longitude": -98.53741132866453
-            },
+            }
          }]
    }, {
       "idCat": "idCat2",
@@ -49,7 +49,7 @@
          "loc": {
             "latitude": 19.50904,
             "longitude": -98.53636
-         },
+         }
       },
       {
          "id": "estab5",
@@ -59,7 +59,7 @@
          "loc": {
             "latitude": 19.49277,
             "longitude": -98.53524
-         },
+         }
       },
       {
          "id": "estab6",
@@ -69,11 +69,12 @@
          "loc": {
             "latitude": 19.49176,
             "longitude": -98.54279
-         },
+         }
       }]
    }, {
       "idCat": "idCat3",
       "category": "Bares",
+      "can": {},
       "data": [
          {
             "id": 5,
@@ -83,12 +84,13 @@
             "loc": {
                "latitude": 19.49597,
                "longitude": -98.53468
-            },
-         },
+            }
+         }
       ]
    }, {
       "idCat": "idCat4",
       "category": "Demas",
+      "can": {},
       "data": [
          {
             "id": 8,
@@ -98,12 +100,13 @@
             "loc": {
                "latitude": 19.51133,
                "longitude": -98.53118
-            },
+            }
          }
       ]
    }, {
       "idCat": "idCat5",
       "category": "Pulqueria",
+      "can": {},
       "data": [
          {
             "id": 6,
@@ -113,7 +116,7 @@
             "loc": {
                "latitude": 19.49497,
                "longitude": -98.53534
-            },
+            }
          },
          {
             "id": 7,
@@ -123,8 +126,8 @@
             "loc": {
                "latitude": 19.49361,
                "longitude": -98.53506
-            },
-         },
+            }
+         }
       ]
    }
 ]
