@@ -1,4 +1,4 @@
-let establecimientos = [
+[
    {
       idCat: 'idCat1',
       category: 'Hoteleria',
