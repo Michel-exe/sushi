@@ -244,11 +244,11 @@ let obj = [
       data: [
          {
             plat: "roshy roll",
-            ingr: "Pollo en tempura, philadelphia, por fuera en tempura con salsa de águila y galleta de arroz.",
+            ingr: "surimi, aguacate por fuera en tempura con pasta tampico.",
             cost: 85
          }, {
             plat: "Kurakka Roll",
-            ingr: "surimi, aguacate por fuera en tempura con pasta tampico.",
+            ingr: "Pollo en tempura, philadelphia, por fuera en tempura con salsa de águila y galleta de arroz.",
             cost: 80
          },
       ]
