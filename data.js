@@ -121,6 +121,10 @@ let obj = [
             plat: "yakimeshi surimi",
             ingr: "arroz frito, surimi, zanahoria, calabaza, huevo.",
             cost: 60
+         }, {
+            plat: "yakimeshi mixto",
+            ingr: "arroz frito, surimi, res, pollo, zanahoria, calabaza y huevo.",
+            cost: 65
          }
       ]
    },
@@ -161,15 +165,15 @@ let obj = [
          {
             plat: "teppanyaki verdura",
             ingr: "verduras a la plancha, champiñones, calabaza, zanahoria, brocoli, pimiento, cebollin y arroz gohan.",
-            cost: 45
+            cost: 50
          }, {
             plat: "teppanyaki hiyoko (pollo)",
             ingr: "verduras a la plancha, pollo, champiñones, calabaza, zanahoria, brocoli, pimiento, cebollin y arroz gohan.",
-            cost: 50
+            cost: 55
          }, {
             plat: "teppanyaki gyuniku (res)",
             ingr: "verduras a la plancha, res, champiñones, zanahoria, brocoli, pimiento y cebollin.",
-            cost: 55
+            cost: 60
          },
       ]
    },
@@ -234,7 +238,7 @@ let obj = [
          {
             plat: "onigiri frio 2pz",
             ingr: "2 Piezas, pepino, aguacate, camarón y ajonjoli por fuera.",
-            cost: 60
+            cost: 70
          },
       ]
    },
@@ -259,7 +263,7 @@ let obj = [
       data: [
          {
             plat: "sushi empanizado 30pz",
-            ingr: "Charola 30 piezas Hot Roll mas 3 aderezos.",
+            ingr: "Charola 30 piezas Hot Roll mas 2 aderezos.",
             cost: 200
          }, {
             plat: "sushi surtido 40pz",
