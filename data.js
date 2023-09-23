@@ -77,7 +77,7 @@ let obj = [
          }, {
             plat: "dragon roll",
             ingr: "Res a la plancha, queso manchego, chiles toreados, empanizado por fuera.",
-            cost: 85
+            cost: 80
          }, {
             plat: "coco roll",
             ingr: "Surimi empanizado, aguacate, philadelphia, empanizado por fuera y dulce de coco.",
