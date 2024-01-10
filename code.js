@@ -187,7 +187,7 @@ document.getElementById("selecPagoSpan").addEventListener("click", e =>{
             ${"$ ".concat(parseInt(document.querySelector(".tot b").innerHTML.replaceAll("$ ",""))+15)}
          `
       }
-      tmpmsj = ` *Dirección:* ${document.getElementById("datosDomicilio")[0].value} *Referencia:* ${document.getElementById("datosDomicilio")[1].value} *Nombre:* ${document.getElementById("datosDomicilio")[2].value}.* - *Total a pagar:* $ ${parseInt(document.querySelector(".tot b").innerHTML.replace("$",""))+25} - *Pago:* ${tmpmsj2[0]}.`
+      tmpmsj = ` *Dirección:* ${document.getElementById("datosDomicilio")[0].value} *Referencia:* ${document.getElementById("datosDomicilio")[1].value} *Nombre:* ${document.getElementById("datosDomicilio")[2].value}.* - *Total a pagar:* $ ${parseInt(document.querySelector(".tot b").innerHTML.replace("$",""))+30} - *Pago:* ${tmpmsj2[0]}.`
       llenarLink(msjComplete.concat(tmpmsj),tmpmsj2[1])
    }
 })
