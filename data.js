@@ -91,6 +91,10 @@ let obj = [
             ingr: "Camaron empanizado, aguacate, philadelphia, empanizado por fuera y aderezo de chipotle chipotle.",
             cost: 70
          }, {
+            plat: "shokushu roll",
+            ingr: "Pulpo picante, philadelphia  envuelto en alga empanizado,  con ensalada de pepino.",
+            cost: 90
+         }, {
             plat: "oishi maki",
             ingr: "Surimi empanizado, aguacate, queso manchego con salsa dulce picante, empanizado por fuera.",
             cost: 75
