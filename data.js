@@ -52,6 +52,10 @@ let obj = [
             ingr: "Surimi, pepino, philadelphia, envuelto en mango con salsa de anguila.",
             cost: 70
          }, {
+            plat: "shokushu roll",
+            ingr: "Pulpo picante, philadelphia  envuelto en alga empanizado,  con ensalada de pepino.",
+            cost: 90
+         }, {
             plat: "palto maki",
             ingr: "Camarón, pepino, philadelphia, aguacate por fuera y ajonjolí.",
             cost: 70
@@ -90,10 +94,6 @@ let obj = [
             plat: "hot roll",
             ingr: "Camaron empanizado, aguacate, philadelphia, empanizado por fuera y aderezo de chipotle chipotle.",
             cost: 70
-         }, {
-            plat: "shokushu roll",
-            ingr: "Pulpo picante, philadelphia  envuelto en alga empanizado,  con ensalada de pepino.",
-            cost: 90
          }, {
             plat: "oishi maki",
             ingr: "Surimi empanizado, aguacate, queso manchego con salsa dulce picante, empanizado por fuera.",
