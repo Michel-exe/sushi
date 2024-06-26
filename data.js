@@ -18,7 +18,7 @@ let obj = [
          }, {
             plat: "cheese roll",
             ingr: "Forrado de queso manchego. aderezo de chipotle, camaron empanizado , philadelphia y aguacate",
-            cost: 75
+            cost: 80
          }, {
             plat: "dieta roll",
             ingr: "Surimi, philadelphia, aguacate envuelto en hoja de pepino.",
@@ -30,7 +30,7 @@ let obj = [
          }, {
             plat: "macho roll",
             ingr: "Camaron empanizado, aguacate, philadelphia, envuelto en plátano frito y salsa de anguila.",
-            cost: 70
+            cost: 75
          }, {
             plat: "green roll",
             ingr: "Camaron, pepino, aguacate, envuelto en kiwi con salsa de anguila.",
@@ -42,7 +42,7 @@ let obj = [
          }, {
             plat: "amai maki",
             ingr: "Surimi empanizado, aguacate, philadelphia, pepino por fuera con salsa dulce picante.",
-            cost: 70
+            cost: 75
          }, {
             plat: "kanikama maki",
             ingr: "Surimi, pasta tampico por dentro y por fuera.",
@@ -58,12 +58,20 @@ let obj = [
          }, {
             plat: "palto maki",
             ingr: "Camarón, pepino, philadelphia, aguacate por fuera y ajonjolí.",
-            cost: 70
+            cost: 75
          }, {
             plat: "california maki",
             ingr: "Camaron, pepino, aguacate y ajonjolí por fuera.",
             cost: 55
-         }
+         }, {
+            plat: "HANAKATSUO ROL",
+            ingr: "Philadelphia, tocino, pollo en teriyaki, por fuera laminas de pez ahumando ",
+            cost: 90
+         }, {
+            plat: "MASAGO ROLL",
+            ingr: "Camarón, pepino, philadelphia y masago por fuera",
+            cost: 90
+         },
       ]
    },
    {
@@ -85,7 +93,7 @@ let obj = [
          }, {
             plat: "coco roll",
             ingr: "Surimi empanizado, aguacate, philadelphia, empanizado por fuera y dulce de coco.",
-            cost: 75
+            cost: 80
          }, {
             plat: "sweet roll",
             ingr: "Pollo en teriyaki, philadelphia, queso manchego, empanizado.",
@@ -101,6 +109,10 @@ let obj = [
          }, {
             plat: "queso maki",
             ingr: "Philadelphia, queso manchego, empanizado. por fuera",
+            cost: 65
+         }, {
+            plat: "SHOKUSHO ROLL",
+            ingr: "Pulpo picante y  philadelphia,  pepino curtido empanizado por fuera",
             cost: 65
          }
       ]
@@ -226,7 +238,7 @@ let obj = [
          {
             plat: "gyozas",
             ingr: "Rellenas de pollo sabor schezuan acompañado con verduras.",
-            cost: 55
+            cost: 60,
          }
       ]
    },
@@ -237,17 +249,17 @@ let obj = [
          {
             plat: "onigiri empanizado 2pz",
             ingr: "2 Piezas, Res, chiles tornados manchego.",
-            cost: 70
+            cost: 75
          },
          {
             plat: "onigiri frio 2pz",
             ingr: "2 Piezas, pepino, aguacate, camarón y ajonjoli por fuera.",
-            cost: 70
+            cost: 75
          },
       ]
    },
    {
-      name: "tempura",
+      name: "Sushi Tempura",
       imag: "media/poke.png",
       data: [
          {
@@ -257,6 +269,14 @@ let obj = [
          }, {
             plat: "Kurakka Roll",
             ingr: "Pollo en tempura, philadelphia, por fuera en tempura con salsa de águila y galleta de arroz.",
+            cost: 80
+         }, {
+            plat: "KUNSEI ROLL",
+            ingr: "Philadelphia, tocino, pollo en teriyaki, por fuera en tempura con láminas de pez ahumando.",
+            cost: 90
+         }, {
+            plat: "KURAKKA ROLL",
+            ingr: "Pollo en tempura, philadelphia, por fuera en tempura con salsa de anguila y galleta de arroz.",
             cost: 80
          },
       ]
@@ -299,9 +319,13 @@ let obj = [
       name: "bebidas",
       imag: "media/beer.png",
       data: [
+         {plat: "Agua embotellada", ingr:"", cost: 15},
+         {plat: "Agua mineral", ingr:"", cost: 20},
+         {plat: "Calpis jarra sabor", ingr:"", cost: 120},
+         {plat: "Strongbow", ingr:"", cost: 30},   
          { plat: "nieve flotante", ingr: "bebida gasificación a base de 2 bolas de nieve de limón.", cost: 38 },
-         { plat: "jarra de te helado", ingr: "Negro", cost: 45 },
-         { plat: "vaso de te helado", ingr: "Negro", cost: 20 },
+         { plat: "jarra de te helado negro", ingr: "", cost: 45 },
+         { plat: "vaso de te helado negro", ingr: "", cost: 20 },
          { plat: "calpis chela", cost: 40 },
          { plat: "calpis sabor", cost: 40 },
          { plat: "jarra de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 50 },
