@@ -60,14 +60,10 @@ let obj = [
             ingr: "Camaron, pepino, aguacate y ajonjolí por fuera.",
             cost: 55
          }, {
-            plat: "HANAKATSUO ROL",
+            plat: "Hanakaysuo Roll",
             ingr: "Philadelphia, tocino, pollo en teriyaki, por fuera laminas de pez ahumando ",
             cost: 90
-         }, {
-            plat: "MASAGO ROLL",
-            ingr: "Camarón, pepino, philadelphia y masago por fuera",
-            cost: 90
-         },
+         }
       ]
    },
    {
@@ -245,12 +241,12 @@ let obj = [
          {
             plat: "onigiri empanizado 2pz",
             ingr: "2 Piezas, Res, chiles tornados manchego.",
-            cost: 75
+            cost: 70
          },
          {
             plat: "onigiri frio 2pz",
             ingr: "2 Piezas, pepino, aguacate, camarón y ajonjoli por fuera.",
-            cost: 75
+            cost: 70
          },
       ]
    },
@@ -267,13 +263,9 @@ let obj = [
             ingr: "Pollo en tempura, philadelphia, por fuera en tempura con salsa de águila y galleta de arroz.",
             cost: 80
          }, {
-            plat: "KUNSEI ROLL",
+            plat: "Kunsei Roll",
             ingr: "Philadelphia, tocino, pollo en teriyaki, por fuera en tempura con láminas de pez ahumando.",
             cost: 90
-         }, {
-            plat: "KURAKKA ROLL",
-            ingr: "Pollo en tempura, philadelphia, por fuera en tempura con salsa de anguila y galleta de arroz.",
-            cost: 80
          },
       ]
    },
@@ -326,7 +318,7 @@ let obj = [
          { plat: "calpis sabor", cost: 40 },
          { plat: "jarra de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 50 },
          { plat: "vaso de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 25 },
-         { plat: "calpis sabor (jarra)", cost: 110},
+         { plat: "calpis sabor (jarra)", cost: 120},
          { plat: "refresco lata", cost: 20 },
          { plat: "sake", ingr: "Vino de arroz", cost: 20 },
       ]
@@ -350,6 +342,10 @@ let obj = [
          }, {
             plat: "nieve de limon",
             cost: 20
+         }, {
+            plat: "Helado de Matcha",
+            ingr: "",
+            cost: 60 
          }
       ]
    },
@@ -363,7 +359,10 @@ let obj = [
          { plat: "chiles toreados", cost: 15 },
          { plat: "extra wasabi", cost: 15 },
          { plat: "ingrediente extra", cost: 15 },
-         { plat: "extra siracha", cost: 15 }
+         { plat: "extra siracha", cost: 15 },
+         { plat: "dulce picante", cost: 15 },
+         { plat: "dulce naranja", cost: 15 },
+         { plat: "jengibre curtido", cost: 15 },
       ]
    },
 ]
