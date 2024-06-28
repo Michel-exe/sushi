@@ -201,6 +201,17 @@ let obj = [
       ]
    },
    {
+      name: "Nigiris",
+      imag: "media/sushi.png",
+      data: [
+         {
+            plat: "Nigiri",
+            ingr: "",
+            cost: 75
+         }
+      ]
+   },
+   {
       name: "kushiague",
       imag: "media/poke.png",
       data: [
