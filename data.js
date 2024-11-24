@@ -1,379 +1,75 @@
 let obj = [
    {
-      name: "sushi frio",
-      imag: "media/sushi.png",
+      name: "Abarrotes",
       data: [
-         {
-            plat: "salmontino",
-            ingr: "Pasta tampico, philadelphia, pepino, zanahoria, por fuera salmón ahumado y aguacate.",
-            cost: 90
-         }, {
-            plat: "kioto roll",
-            ingr: "Salmon sellado, philadelphia, pasta tampico y aguacate.",
-            cost: 90
-         }, {
-            plat: "cangrejo roll",
-            ingr: "Surimi empanizado, pepino, aguacate, alga por fuera y champiñon.",
-            cost: 75
-         }, {
-            plat: "cheese roll",
-            ingr: "Forrado de queso manchego. aderezo de chipotle, camaron empanizado , philadelphia y aguacate",
-            cost: 80
-         }, {
-            plat: "dieta roll",
-            ingr: "Surimi, philadelphia, aguacate envuelto en hoja de pepino.",
-            cost: 75
-         }, {
-            plat: "loco roll",
-            ingr: "Camaron, philadelphia, aguacate envuelto en tocino con queso manchego gratinado",
-            cost: 75
-         }, {
-            plat: "macho roll",
-            ingr: "Camaron empanizado, aguacate, philadelphia, envuelto en plátano frito y salsa de anguila.",
-            cost: 75
-         }, {
-            plat: "green roll",
-            ingr: "Camaron, pepino, aguacate, envuelto en kiwi con salsa de anguila.",
-            cost: 75
-         }, {
-            plat: "Masago Roll",
-            ingr: "Camarón, pepino, philadelphia y masago por fuera",
-            cost: 90
-         }, {
-            plat: "amai maki",
-            ingr: "Surimi empanizado, aguacate, philadelphia, pepino por fuera con salsa dulce picante.",
-            cost: 75
-         }, {
-            plat: "kanikama maki",
-            ingr: "Surimi, pasta tampico por dentro y por fuera.",
-            cost: 70
-         }, {
-            plat: "tropical roll",
-            ingr: "Surimi, pepino, philadelphia, envuelto en mango con salsa de anguila.",
-            cost: 70
-         }, {
-            plat: "palto maki",
-            ingr: "Camarón, pepino, philadelphia, aguacate por fuera y ajonjolí.",
-            cost: 75
-         }, {
-            plat: "california maki",
-            ingr: "Camaron, pepino, aguacate y ajonjolí por fuera.",
-            cost: 55
-         }, {
-            plat: "Hanakaysuo Roll",
-            ingr: "Philadelphia, tocino, pollo en teriyaki, por fuera laminas de pez ahumando ",
-            cost: 90
-         }
+         { plat: "Aceite 123 500 ml   ", cost: 23 },
+         { plat: "Aceite 123 1 litro.      ", cost: 43 },
+         { plat: "Aceite Olivo Pz 45 Ml.  ", cost: 8 },
+         { plat: "Agua bonafont 1.5 Lt.    ", cost: 12 },
+         { plat: "Alpura 1L      ", cost: 26 },
+         { plat: "Ariel 250 Ml.       ", cost: 13.5 },
+         { plat: "Atún dolores aceite 133 Gr. ", cost: 22 },
+         { plat: "Atún Hernandez aceite 132 Gr. ", cost: 22 },
+         { plat: "Bbq orig Hunts 360 Gr.  ", cost: 36 },
+         { plat: "Big papel 600 hoj ", cost: 38 },
+         { plat: "Blanca nieves 250 g   ", cost: 10 },
+         { plat: "Boing 250 ml guayaba/mango/manzana/uva.     ", cost: 9 },
+         { plat: "Carisma Liq 1L. ", cost: 41 },
+         { plat: "Castup Clemente Jacques 220 Gr", cost: 41 },
+         { plat: "Ensalada de verduras 220 Gr", cost: 13 },
+         { plat: "Elote costeña 410 Gr  ", cost: 20 },
+         { plat: "Ensueño fresca azul 850 ml", cost: 26 },
+         { plat: "Fabuloso 500 ml. ", cost: 19 },
+         { plat: "Gerber fruta mixta 100 Gr", cost: 13 },
+         { plat: "Hot Cakes Tres estrellas 1 kg", cost: 42 },
+         { plat: "Jabón Ace 500 g   ", cost: 23 },
+         { plat: "Jabón rosa zote.   ", cost: 12 },
+         { plat: "Jalapeños morena", cost: 15 },
+         { plat: "Jumex durazno/ mango/ manzana 475 ml", cost: 14 },
+         { plat: "Maíz palomero 250 Gr", cost: 7.5 },
+         { plat: "Marlboro rojo.", cost: 5 },
+         { plat: "Maruchan camarón sol", cost: 17 },
+         { plat: "Mayonesa 228 Gr", cost: 36, },
       ]
-   },
-   {
-      name: "sushi empanizados",
-      imag: "media/sushi3.png",
+   },{
+      name: "Barquillo",
       data: [
-         {
-            plat: "delux roll",
-            ingr: "Camaron empanizado, aguacate, philadelphia, empanizado por fuera gratinado con queso manchego al chipotle y tocino.",
-            cost: 85
-         }, {
-            plat: "mar y tierra",
-            ingr: "Camaron, res, pollo en teriyaki, manchego, empanizado por fuera.",
-            cost: 85
-         }, {
-            plat: "dragon roll",
-            ingr: "Res a la plancha, queso manchego, chiles toreados, empanizado por fuera.",
-            cost: 80
-         }, {
-            plat: "coco roll",
-            ingr: "Surimi empanizado, aguacate, philadelphia, empanizado por fuera y dulce de coco.",
-            cost: 80
-         }, {
-            plat: "sweet roll",
-            ingr: "Pollo en teriyaki, philadelphia, queso manchego, empanizado.",
-            cost: 75
-         }, {
-            plat: "hot roll",
-            ingr: "Camaron empanizado, aguacate, philadelphia, empanizado por fuera y aderezo de chipotle chipotle.",
-            cost: 70
-         }, {
-            plat: "oishi maki",
-            ingr: "Surimi empanizado, aguacate, queso manchego con salsa dulce picante, empanizado por fuera.",
-            cost: 75
-         }, {
-            plat: "queso maki",
-            ingr: "Philadelphia, queso manchego, empanizado. por fuera",
-            cost: 65
-         }, {
-            plat: "SHOKUSHO ROLL",
-            ingr: "Pulpo picante y  philadelphia,  pepino curtido empanizado por fuera",
-            cost: 95
-         }
+         { plat: "Barquillo Chocolate-Cuetara-290gr", cost: 44 },
+         { plat: "Barquillo Chocolate-Cuetara-570gr", cost: 79 },
+         { plat: "Barquillo Con Malvavisco Momoman-Lu...", cost: 53 },
+         { plat: "Barquillo Mary", cost: 41 },
+         { plat: "Barquillo Wafer Kalu-Kalu-180pz", cost: 115 },
+         { plat: "Wafer Calu Chocolate 85 Pz 422g", cost: 60 },
       ]
-   },
-   {
-      name: "yakimeshi",
-      imag: "media/sopa.png",
+   },{
+      name: "Bombones",
       data: [
-         {
-            plat: "yakimeshi verdura",
-            ingr: "arroz frito, zanahoria, calabaza, huevo.",
-            cost: 50
-         }, {
-            plat: "yakimeshi hiyoko (pollo)",
-            ingr: "arroz frito, pollo, zanahoria, calabaza, huevo.",
-            cost: 55
-         }, {
-            plat: "yakimeshi gyuniku (res)",
-            ingr: "arroz frito, res, zanahoria, calabaza, huevo y arroz gohan.",
-            cost: 55
-         }, {
-            plat: "yakimeshi surimi",
-            ingr: "arroz frito, surimi, zanahoria, calabaza, huevo.",
-            cost: 60
-         }, {
-            plat: "yakimeshi mixto",
-            ingr: "arroz frito, surimi, res, pollo, zanahoria, calabaza y huevo.",
-            cost: 65
-         }
+         {plat: "Bianchi Corazon Supergigante",cost: 65},
+         {plat: "Blanchi Gr Colores 400gr",cost: 36},
+         {plat: "Bianchi Mediano Colores 400gr",cost: 36},
+         {plat: "Bianchi Menta Cj 50pz",cost: 76},
+         {plat: "Bombon Bianchi Ch Azul-Rosa 400gr",cost: 36},
+         {plat: "Bombon Bianchi Ch Colores-Rosa 400gr",cost: 36},
+         {plat: "Bombon Bianchi ChocoCorazon-Rosa-5",cost: 76},
+         {plat: "Bombon Bianchi Chocolate-Rosa-32pz",cost: 85.5},
+         {plat: "Bombon Bianchi Chocolate-Rosa-50pz",cost: 76},
+         {plat: "Bombon Bianchi Corazon-Rosa-400gr",cost: 538},
+         {plat: "Bombon Bianchi Enrollados-La Rosa-40",cost: 36},
+         {plat: "Bombon Bianchi Figuras Con, Osit, Poll-..",cost: 38},
+         {plat: "Bombon Bianchi Gra-Rosa 400gr",cost: 936},
+         {plat: "Bombon Bianchi Med-Rosa 400gr",cost: 36},
+         {plat: "Bombon Bianchi Mini Rosa- 400gr",cost: 37},
+         {plat: "Bombon Bianchi Minimini-Rosa 30pz",cost: 103},
+         {plat: "Bombon Coffis-Products 50 Pz",cost: 71.5},
+         {plat: "Bombon Malvalleno Chocolate Mix-Can",cost: 65.5},
+         {plat: "Bombon Tapon-Bremen 200gr",cost: 51}
       ]
-   },
-   {
-      name: "pastas",
-      imag: "media/ramen.png",
-      data: [
-         {
-            plat: "Schezuan hiyoko (pollo)",
-            ingr: "pasta, pollo, zanahoria, calabaza, brocoli, champiñones, pimientos y cebollin.",
-            cost: 65
-         }, {
-            plat: "Schezuan gyuniku (res)",
-            ingr: "pasta, res, zanahoria, calabaza, brocoli, champiñones, pimientos y cebollin.",
-            cost: 70
-         }
-      ]
-   },
-   {
-      name: "ramen",
-      imag: "media/ramen2.png",
-      data: [
-         {
-            plat: "ramen res",
-            ingr: "res, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen",
-            cost: 75
-         }, {
-            plat: "ramen surimi",
-            ingr: "surimi en tempura, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen.",
-            cost: 75
-         }
-      ]
-   },
-   {
-      name: "teppanyaki ",
-      imag: "media/teppanyaki.png",
-      data: [
-         {
-            plat: "teppanyaki verdura",
-            ingr: "verduras a la plancha, champiñones, calabaza, zanahoria, brocoli, pimiento, cebollin y arroz gohan.",
-            cost: 50
-         }, {
-            plat: "teppanyaki hiyoko (pollo)",
-            ingr: "verduras a la plancha, pollo, champiñones, calabaza, zanahoria, brocoli, pimiento, cebollin y arroz gohan.",
-            cost: 55
-         }, {
-            plat: "teppanyaki gyuniku (res)",
-            ingr: "verduras a la plancha, res, champiñones, zanahoria, brocoli, pimiento y cebollin.",
-            cost: 60
-         },
-      ]
-   },
-   {
-      name: "temaki",
-      imag: "media/temaki.png",
-      data: [
-         {
-            plat: "temaki kappa shako",
-            ingr: "camaron, philadephia, pepino, zanahoria, ajonjolí.",
-            cost: 55
-         }, {
-            plat: "temaki vegetariano",
-            ingr: "pepino, zanahoria, aguacate, philadelphia.",
-            cost: 50
-         },
-      ]
-   },
-   {
-      name: "Nigiris",
-      imag: "media/sushi.png",
-      data: [
-         {
-            plat: "Nigiri",
-            ingr: "",
-            cost: 75
-         }
-      ]
-   },
-   {
-      name: "kushiague",
-      imag: "media/poke.png",
-      data: [
-         {
-            plat: "kushi queso",
-            ingr: "brocheta de queso manchego, philadelphia, empanizado.",
-            cost: 35
-         }, {
-            plat: "kushi ebi",
-            ingr: "brocheta de camaron, philadelphia, empanizado.",
-            cost: 35
-         }, {
-            plat: "kushi surim ",
-            ingr: "brocheta de surimi, philadelphia, empanizado.",
-            cost: 30
-         }, {
-            plat: "kushi banan ",
-            ingr: "brocheta de plátano frito, philadelphia, empanizado.",
-            cost: 25
-         }
-      ]
-   },
-   {
-      name: "gyozas",
-      imag: "media/gyoza.png",
-      data: [
-         {
-            plat: "gyozas",
-            ingr: "Rellenas de pollo sabor schezuan acompañado con verduras.",
-            cost: 60,
-         }
-      ]
-   },
-   {
-      name: "onigiri",
-      imag: "media/onigiri2.png",
-      data: [
-         {
-            plat: "onigiri empanizado 2pz",
-            ingr: "2 Piezas, Res, chiles tornados manchego.",
-            cost: 70
-         },
-         {
-            plat: "onigiri frio 2pz",
-            ingr: "2 Piezas, pepino, aguacate, camarón y ajonjoli por fuera.",
-            cost: 70
-         },
-      ]
-   },
-   {
-      name: "Sushi Tempura",
-      imag: "media/poke.png",
-      data: [
-         {
-            plat: "roshy roll",
-            ingr: "surimi, aguacate por fuera en tempura con pasta tampico.",
-            cost: 85
-         }, {
-            plat: "Kurakka Roll",
-            ingr: "Pollo en tempura, philadelphia, por fuera en tempura con salsa de águila y galleta de arroz.",
-            cost: 80
-         }, {
-            plat: "Kunsei Roll",
-            ingr: "Philadelphia, tocino, pollo en teriyaki, por fuera en tempura con láminas de pez ahumando.",
-            cost: 90
-         },
-      ]
-   },
-   {
-      name: "sushi charola",
-      imag: "media/bento.png",
-      data: [
-         {
-            plat: "sushi empanizado 30pz",
-            ingr: "Charola 30 piezas Hot Roll mas 2 aderezos.",
-            cost: 200
-         }, {
-            plat: "sushi surtido 40pz",
-            ingr: "charola 40 piezas mas 3 aderezos",
-            cost: 350
-         }, {
-            plat: "sushi surtido 30pz",
-            ingr: "charola 30 piezas mas 3 aderezos",
-            cost: 270
-         }
-      ]
-   },
-   {
-      name: "poke",
-      imag: "media/poke.png",
-      data: [
-         {
-            plat: "poke amai toriniku",
-            ingr: "pollo tempura en teriyaki, mango, pepino, ajonjoli, arroz gohan y alga nori.",
-            cost: 65
-         }, {
-            plat: "poke surimi teriyaki",
-            ingr: "surimi tempura en teriyaki, mango, pepino, ajonjoli, arroz gohan y alga nori.",
-            cost: 65
-         }
-      ]
-   },
-   {
-      name: "bebidas",
-      imag: "media/beer.png",
-      data: [
-         {plat: "Agua embotellada", ingr:"", cost: 15},
-         {plat: "Agua mineral", ingr:"", cost: 20},
-         {plat: "Calpis jarra sabor", ingr:"", cost: 120},
-         {plat: "Strongbow", ingr:"", cost: 30},   
-         { plat: "nieve flotante", ingr: "bebida gasificación a base de 2 bolas de nieve de limón.", cost: 38 },
-         { plat: "jarra de te helado negro", ingr: "", cost: 45 },
-         { plat: "vaso de te helado negro", ingr: "", cost: 20 },
-         { plat: "calpis chela", cost: 40 },
-         { plat: "calpis sabor", cost: 40 },
-         { plat: "jarra de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 50 },
-         { plat: "vaso de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 25 },
-         { plat: "calpis sabor (jarra)", cost: 120},
-         { plat: "refresco lata", cost: 20 },
-         { plat: "sake", ingr: "Vino de arroz", cost: 20 },
-      ]
-   },
-   {
-      name: "postres",
-      imag: "media/narutomaki.png",
-      data: [
-         {
-            plat: "tempura helado classic",
-            ingr: "cubierto con chocolate líquido.",
-            cost: 40
-         }, {
-            plat: "tempura helado crunchy",
-            ingr: "cubierto con cajeta y nuez.",
-            cost: 45
-         }, {
-            plat: "tempura helado magic",
-            ingr: "cubierto con chocolate líquido, crema batida, cereza y con bola de nieve sabor chocolate.",
-            cost: 50
-         }, {
-            plat: "nieve de limon",
-            cost: 20
-         }, {
-            plat: "Helado de Matcha",
-            ingr: "",
-            cost: 60 
-         }
-      ]
-   },
-   {
-      name: "extras",
-      imag: "media/takoyaki.png",
-      data: [
-         { plat: "extra salsa de anguila", cost: 15 },
-         { plat: "extra aderezo de chipotle", cost: 15 },
-         { plat: "extra pasta tampico", cost: 20 },
-         { plat: "chiles toreados", cost: 15 },
-         { plat: "extra wasabi", cost: 15 },
-         { plat: "ingrediente extra", cost: 15 },
-         { plat: "extra siracha", cost: 15 },
-         { plat: "dulce picante", cost: 15 },
-         { plat: "dulce naranja", cost: 15 },
-         { plat: "jengibre curtido", cost: 15 },
-      ]
-   },
+   }
 ]
+
+
+
+
+
+
+
