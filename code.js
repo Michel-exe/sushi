@@ -62,7 +62,7 @@ const recogerPedido = document.getElementById("recogerPedido");
 let elementActual;
 
 const llenarLink = (val,num) => {
-   const apiWhatsapp = 'https://api.whatsapp.com/send?phone=527491060297&text='
+   const apiWhatsapp = 'https://api.whatsapp.com/send?phone=527491067908&text='
    let el = document.querySelectorAll(".linkWhats")
    val = "Hola me gustaria ordenar:+".concat(val)
    console.log(apiWhatsapp.concat(val));
