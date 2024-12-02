@@ -162,7 +162,7 @@ document.getElementById("abrirOrden").addEventListener("click", ()=>{
    if(totfin > 0){
       document.querySelector(".tot b").innerHTML=`$ ${totfin}`
       orden.style.transform="scale(1)"
-      llenarLink(msjComplete.concat("*Recojo en el Restaurante*"),2)
+      llenarLink(msjComplete.concat("*Recojo en la dulceria*"),2)
    } else{
       alert("Por favor ordene algo")
    }
@@ -196,7 +196,7 @@ document.getElementById("recoRestaurante").addEventListener("click",()=>{
 
 document.getElementById("cantEfectivoVal").addEventListener("keyup", e =>llenarLink(`${msjComplete} ${tmpmsj} Con la cantidad de: *$${e.target.value}*. ¿En qué tiempo estaría? `,1))
 document.getElementById("tiempoPedidoInp").addEventListener("change", e =>{
-   let cad = `${msjComplete} *Total a pagar:* ${document.querySelector(".tot b").textContent} ${tmpmsj} *Recojo en el Restaurante.* *Llego  a las:* ${e.target.value}`
+   let cad = `${msjComplete} *Total a pagar:* ${document.querySelector(".tot b").textContent} ${tmpmsj} *Recojo en la dulceria.* *Llego  a las:* ${e.target.value}`
    cad=cad.replaceAll("*Pago:*","")
    cad=cad.replaceAll("Transferencia","")
    cad=cad.replaceAll("Efectivo","")
