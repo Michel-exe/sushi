@@ -106,6 +106,10 @@ let obj = [
             plat: "SHOKUSHO ROLL",
             ingr: "Pulpo picante y  philadelphia,  pepino curtido empanizado por fuera",
             cost: 95
+         }, {
+            plat: "Niku maki",
+            ingr: "Carne al pastor, queso manchego por dentro; queso manchego gratinado al chipotle, piña asada, empanzado por fuera.",
+            cost: 85
          }
       ]
    },
@@ -124,7 +128,7 @@ let obj = [
          }, {
             plat: "yakimeshi gyuniku (res)",
             ingr: "arroz frito, res, zanahoria, calabaza, huevo y arroz gohan.",
-            cost: 55
+            cost: 60
          }, {
             plat: "yakimeshi surimi",
             ingr: "arroz frito, surimi, zanahoria, calabaza, huevo.",
@@ -163,6 +167,10 @@ let obj = [
             plat: "ramen surimi",
             ingr: "surimi en tempura, huevo, naruto, cebollin, zanahoria, calabaza, pasta ramen.",
             cost: 75
+         }, {
+            plat: "Ramen Camaron",
+            ingr: "Camaron picante, zanahoria, calabaza, champiñon, huevo, naruto y pasta Ramen",
+            cost: 85
          }
       ]
    },
@@ -228,9 +236,9 @@ let obj = [
             ingr: "brocheta de surimi, philadelphia, empanizado.",
             cost: 30
          }, {
-            plat: "kushi banan ",
+            plat: "kushi banana ",
             ingr: "brocheta de plátano frito, philadelphia, empanizado.",
-            cost: 25
+            cost: 30
          }
       ]
    },
@@ -286,16 +294,20 @@ let obj = [
       data: [
          {
             plat: "sushi empanizado 30pz",
-            ingr: "Charola 30 piezas Hot Roll mas 2 aderezos.",
+            ingr: "Charola 30 piezas Hot Roll + 2 aderezos.",
             cost: 200
          }, {
             plat: "sushi surtido 40pz",
-            ingr: "charola 40 piezas mas 3 aderezos",
+            ingr: "charola 40 piezas + 3 aderezos",
             cost: 350
          }, {
             plat: "sushi surtido 30pz",
-            ingr: "charola 30 piezas mas 3 aderezos",
+            ingr: "charola 30 piezas + 3 aderezos",
             cost: 270
+         }, {
+            plat: "Sushi kushiages",
+            ingr: "Charola 30 piezas Hot roll + 2 aderezos. 2 kushi queso/2 kushi surimi  ",
+            cost: 240
          }
       ]
    },
@@ -323,15 +335,17 @@ let obj = [
          {plat: "Calpis jarra sabor", ingr:"", cost: 120},
          {plat: "Strongbow", ingr:"", cost: 30},   
          { plat: "nieve flotante", ingr: "bebida gasificación a base de 2 bolas de nieve de limón.", cost: 38 },
-         { plat: "jarra de te helado negro", ingr: "", cost: 45 },
-         { plat: "vaso de te helado negro", ingr: "", cost: 20 },
+         { plat: "jarra de te helado negro", ingr: "", cost: 50 },
+         { plat: "vaso de te helado negro", ingr: "", cost: 25 },
+         { plat: "Té Jazmin", ingr: "", cost: 35 },
+         { plat: "Té Verde", ingr: "", cost: 35 },
          { plat: "calpis chela", cost: 40 },
          { plat: "calpis sabor", cost: 40 },
          { plat: "jarra de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 50 },
          { plat: "vaso de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 25 },
          { plat: "calpis sabor (jarra)", cost: 120},
-         { plat: "refresco lata", cost: 20 },
-         { plat: "sake", ingr: "Vino de arroz", cost: 20 },
+         { plat: "refresco lata", cost: 24 },
+         { plat: "sake Copa", ingr: "Vino de arroz", cost: 25 },
       ]
    },
    {
@@ -341,22 +355,22 @@ let obj = [
          {
             plat: "tempura helado classic",
             ingr: "cubierto con chocolate líquido.",
-            cost: 40
+            cost: 45
          }, {
             plat: "tempura helado crunchy",
             ingr: "cubierto con cajeta y nuez.",
-            cost: 45
+            cost: 50
          }, {
             plat: "tempura helado magic",
             ingr: "cubierto con chocolate líquido, crema batida, cereza y con bola de nieve sabor chocolate.",
-            cost: 50
+            cost: 53
          }, {
             plat: "nieve de limon",
-            cost: 20
+            cost: 25
          }, {
             plat: "Helado de Matcha",
             ingr: "",
-            cost: 60 
+            cost: 50 
          }
       ]
    },
