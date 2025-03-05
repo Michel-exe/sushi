@@ -346,6 +346,7 @@ let obj = [
          { plat: "calpis sabor (jarra)", cost: 120},
          { plat: "refresco lata", cost: 24 },
          { plat: "sake Copa", ingr: "Vino de arroz", cost: 25 },
+         { plat: "Jugo", cost: 24 },
       ]
    },
    {
