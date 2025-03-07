@@ -60,7 +60,7 @@ let obj = [
             ingr: "Camaron, pepino, aguacate y ajonjolí por fuera.",
             cost: 55
          }, {
-            plat: "Hanakaysuo Roll",
+            plat: "Hanakatsuo Roll",
             ingr: "Philadelphia, tocino, pollo en teriyaki, por fuera laminas de pez ahumando ",
             cost: 90
          }
@@ -105,7 +105,7 @@ let obj = [
          }, {
             plat: "SHOKUSHO ROLL",
             ingr: "Pulpo picante y  philadelphia,  pepino curtido empanizado por fuera",
-            cost: 95
+            cost: 90
          }, {
             plat: "Niku maki",
             ingr: "Carne al pastor, queso manchego por dentro; queso manchego gratinado al chipotle, piña asada, empanzado por fuera.",
@@ -204,7 +204,7 @@ let obj = [
          }, {
             plat: "temaki vegetariano",
             ingr: "pepino, zanahoria, aguacate, philadelphia.",
-            cost: 50
+            cost: 55
          },
       ]
    },
@@ -331,15 +331,13 @@ let obj = [
       imag: "media/beer.png",
       data: [
          {plat: "Agua embotellada", ingr:"", cost: 15},
-         {plat: "Agua mineral", ingr:"", cost: 20},
+         {plat: "Agua mineral", ingr:"", cost: 25},
          {plat: "Calpis jarra sabor", ingr:"", cost: 120},
-         {plat: "Strongbow", ingr:"", cost: 30},   
-         { plat: "nieve flotante", ingr: "bebida gasificación a base de 2 bolas de nieve de limón.", cost: 38 },
+         { plat: "nieve flotante", ingr: "bebida gasificación a base de 2 bolas de nieve de limón.", cost: 39 },
          { plat: "jarra de te helado negro", ingr: "", cost: 50 },
          { plat: "vaso de te helado negro", ingr: "", cost: 25 },
          { plat: "Té Jazmin", ingr: "", cost: 35 },
          { plat: "Té Verde", ingr: "", cost: 35 },
-         { plat: "calpis chela", cost: 40 },
          { plat: "calpis sabor", cost: 40 },
          { plat: "jarra de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 50 },
          { plat: "vaso de calpis", ingr: "Bebida no carbonatada con toques cítricos y vainilla.", cost: 25 },
